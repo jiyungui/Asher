@@ -193,6 +193,28 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sliderOffsetX) sliderOffsetX.addEventListener('input', () => { if (valOffsetX) valOffsetX.textContent = `${sliderOffsetX.value}px`; applyViewportTransform(); });
   if (sliderRadius) sliderRadius.addEventListener('input', () => { if (valRadius) valRadius.textContent = `${sliderRadius.value}px`; document.documentElement.style.setProperty('--widget-radius', `${sliderRadius.value}px`); });
 
+
+  // 灵动岛开关控制（同时控制整个顶部状态栏：时间+灵动岛+电量+网络）
+  const toggleDynamicIsland = document.getElementById('toggle-dynamic-island');
+  const statusBar = document.querySelector('.status-bar');
+  
+  if (toggleDynamicIsland && statusBar) {
+    // 从localStorage恢复顶部状态栏显示状态
+    const savedState = localStorage.getItem('asher_dynamic_island_visible');
+    if (savedState !== null) {
+      const isVisible = savedState === 'true';
+      toggleDynamicIsland.checked = isVisible;
+      statusBar.style.display = isVisible ? 'block' : 'none';
+    }
+    
+    // 监听开关变化
+    toggleDynamicIsland.addEventListener('change', () => {
+      const isChecked = toggleDynamicIsland.checked;
+      statusBar.style.display = isChecked ? 'block' : 'none';
+      localStorage.setItem('asher_dynamic_island_visible', isChecked);
+      showToast(isChecked ? '顶部状态栏已开启' : '顶部状态栏已关闭');
+    });
+  }
   if (sliderTemp) sliderTemp.addEventListener('input', () => { const v = parseInt(sliderTemp.value, 10); if (valTemp) valTemp.textContent = v > 0 ? `+${v} (�?` : v < 0 ? `${v} (�?` : '0'; applyScreenFilters(); });
   if (sliderBright) sliderBright.addEventListener('input', () => { if (valBright) valBright.textContent = `${sliderBright.value}%`; applyScreenFilters(); });
   if (sliderContrast) sliderContrast.addEventListener('input', () => { if (valContrast) valContrast.textContent = `${sliderContrast.value}%`; applyScreenFilters(); });

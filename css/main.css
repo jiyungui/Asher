@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    Asher phone - 全局视口、统一 4 列网格基底与滑屏控制器
    ========================================================================== */
 :root {
@@ -103,7 +103,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   padding-top: calc(var(--safe-top) + 28px);
-  padding-bottom: calc(var(--safe-bottom) + 90px);
+  padding-bottom: var(--safe-bottom);
   overflow: hidden;
   position: relative;
 }
