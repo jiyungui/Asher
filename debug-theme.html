@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Debug Theme Issue</title>
+</head>
+<body>
+  <h1>主题色调板块调试</h1>
+  <button onclick="runDebug()">运行诊断</button>
+  <pre id="output"></pre>
+
+  <script>
+    function runDebug() {
+      const output = document.getElementById('output');
+      let result = '';
+      
+      // 在父窗口（Asher Phone）中执行检查
+      const win = window.opener || window.parent || window;
+      
+      result += '=== 1. 检查触发按钮是否存在 ===\n';
+      const themeCell = win.document.querySelector('[data-beauty-target="theme"]');
+      result += `触发按钮存在: ${!!themeCell}\n`;
+      if (themeCell) {
+        result += `按钮类名: ${themeCell.className}\n`;
+        result += `data-beauty-target: ${themeCell.dataset.beautyTarget}\n`;
+      }
+      
+      result += '\n=== 2. 检查子页面是否存在 ===\n';
+      const themeSubpage = win.document.getElementById('bsub-theme');
+      result += `#bsub-theme 存在: ${!!themeSubpage}\n`;
+      if (themeSubpage) {
+        result += `当前class: ${themeSubpage.className}\n`;
+        result += `是否active: ${themeSubpage.classList.contains('active')}\n`;
+      }
+      
+      result += '\n=== 3. 检查事件监听器绑定 ===\n';
+      const allCells = win.document.querySelectorAll('.beauty-cell[data-beauty-target]');
+      result += `找到 .beauty-cell 数量: ${allCells.length}\n`;
+      allCells.forEach((cell, i) => {
+        result += `  ${i+1}. target="${cell.dataset.beautyTarget}"\n`;
+      });
+      
+      result += '\n=== 4. 手动触发点击 ===\n';
+      if (themeCell) {
+        themeCell.click();
+        setTimeout(() => {
+          const isActive = themeSubpage && themeSubpage.classList.contains('active');
+          result += `点击后 #bsub-theme 是否active: ${isActive}\n`;
+          output.textContent = result;
+        }, 100);
+      } else {
+        output.textContent = result;
+      }
+    }
+    
+    // 自动运行
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => runDebug(), 500);
+      });
+    }
+  </script>
+</body>
+</html>

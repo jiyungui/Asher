@@ -1,0 +1,2716 @@
+<!doctype html>
+<html lang="zh-CN" data-v="1792830702">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Asher phone</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Asher phone" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/widgets.css" />
+    <link rel="stylesheet" href="css/apps.css" />
+        <link rel="stylesheet" href="css/characters.css" />
+<link rel="stylesheet" href="css/chat.css?v=2" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/beauty.css?v=1792830702">
+  </head>
+  <body>
+    <!-- 顶部状态栏 -->
+    <header class="status-bar">
+      <div class="status-left" id="status-time">09:41</div>
+      <div class="dynamic-island-capsule"></div>
+      <div class="status-right">
+        <svg class="status-icon" viewBox="0 0 24 24">
+          <path
+            d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 3.3c3.78 0 7.22 1.48 9.77 3.91L12 19.09 2.23 11.21C4.78 8.78 8.22 7.3 12 7.3z"
+          />
+        </svg>
+        <div class="battery-pill"><span class="battery-level"></span></div>
+      </div>
+    </header>
+
+    <!-- 主滑屏容器 -->
+    <main class="phone-screen-container" id="screen-container">
+      <div class="pages-wrapper" id="pages-wrapper">
+        <!-- ================= 第一页 ================= -->
+        <section class="screen-page page-1">
+          <!-- P1: 顶部大组件 (自适应不截断) -->
+          <article class="widget widget-p1-jasmine span-col-4">
+            <div class="p1-header">
+              <span class="p1-day-num" id="p1-day">17</span>
+              <div class="p1-date-wrap">
+                <span class="p1-date-sub" id="p1-date-text">THU NOV</span>
+                <span class="p1-date-year">ASHER · ARCHIVE</span>
+              </div>
+            </div>
+            <div class="p1-divider"></div>
+            <div class="p1-title-group">
+              <h2 class="p1-title">Velvet · Bunny</h2>
+              <p class="p1-subtitle">碎月沉入静海，长耳倾听星云</p>
+            </div>
+
+            <div class="p1-profile-center">
+              <div class="p1-side-tag left-tag">
+                <span>orbit.26</span>
+                <small>Stay · WithYou*</small>
+              </div>
+
+              <div class="p1-avatar-container">
+                <div class="p1-avatar-circle">
+                  <svg viewBox="0 0 100 100" class="vector-rabbit-avatar">
+                    <rect width="100" height="100" fill="#f4ecef" />
+                    <path
+                      d="M22 36 C10 48, 12 74, 25 78 C30 76, 28 55, 32 38 Z"
+                      fill="#ffffff"
+                      stroke="#bdbbbf"
+                      stroke-width="1.8"
+                    />
+                    <path
+                      d="M78 36 C90 48, 88 74, 75 78 C70 76, 72 55, 68 38 Z"
+                      fill="#ffffff"
+                      stroke="#bdbbbf"
+                      stroke-width="1.8"
+                    />
+                    <circle
+                      cx="50"
+                      cy="54"
+                      r="28"
+                      fill="#ffffff"
+                      stroke="#bdbbbf"
+                      stroke-width="1.8"
+                    />
+                    <ellipse cx="40" cy="52" rx="2.5" ry="3.5" fill="#2d2d2d" />
+                    <ellipse cx="60" cy="52" rx="2.5" ry="3.5" fill="#2d2d2d" />
+                    <circle cx="34" cy="58" r="3.5" fill="#f2d7e0" />
+                    <circle cx="66" cy="58" r="3.5" fill="#f2d7e0" />
+                    <path
+                      d="M47 57 Q50 60 53 57"
+                      stroke="#2d2d2d"
+                      stroke-width="1.6"
+                      fill="none"
+                    />
+                    <path
+                      d="M44 76 C46 72, 54 72, 56 76 C52 79, 48 79, 44 76 Z"
+                      fill="#bdbbbf"
+                    />
+                  </svg>
+                </div>
+                <div class="p1-avatar-bubble">listening...</div>
+                <span class="p1-avatar-name">Jasmine</span>
+              </div>
+
+              <div class="p1-side-tag right-tag">
+                <span>* 雾隐 16° 微凉</span>
+                <small>● Moon/ 82%</small>
+              </div>
+            </div>
+
+            <div class="p1-quote-bar">
+              <span class="p1-quote-bullet">✦ :</span>
+              <span class="p1-quote-text"
+                >宇宙正以恒定温柔，将你想念的人送往梦境</span
+              >
+            </div>
+          </article>
+
+          <!-- P2: 正方形小组件 -->
+          <article class="widget widget-square widget-p2-memory span-col-2">
+            <div class="p2-top-bar">
+              <span class="p2-icon-btn">‹</span>
+              <h3 class="p2-title">Memory</h3>
+              <div class="p2-top-actions">
+                <span class="p2-icon-btn">⌕</span>
+                <span class="p2-icon-btn">+</span>
+              </div>
+            </div>
+
+            <div class="p2-cards-carousel">
+              <div class="p2-ghost-card left-card"></div>
+              <div class="p2-main-card">
+                <svg viewBox="0 0 80 80" class="bunny-headphone-svg">
+                  <path
+                    d="M28 24 C24 8, 33 6, 36 24"
+                    fill="#ffffff"
+                    stroke="#bdbbbf"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M52 24 C56 8, 47 6, 44 24"
+                    fill="#ffffff"
+                    stroke="#bdbbbf"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="40"
+                    cy="46"
+                    r="23"
+                    fill="#ffffff"
+                    stroke="#bdbbbf"
+                    stroke-width="2"
+                  />
+                  <circle cx="33" cy="45" r="2.2" fill="#2d2d2d" />
+                  <circle cx="47" cy="45" r="2.2" fill="#2d2d2d" />
+                  <ellipse cx="29" cy="49" rx="2.5" ry="1.5" fill="#f5dce3" />
+                  <ellipse cx="51" cy="49" rx="2.5" ry="1.5" fill="#f5dce3" />
+                  <path
+                    d="M38 50 Q40 52 42 50"
+                    stroke="#2d2d2d"
+                    stroke-width="1.5"
+                    fill="none"
+                  />
+                  <path
+                    d="M16 43 C16 28, 64 28, 64 43"
+                    fill="none"
+                    stroke="#2d2d2d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <rect
+                    x="14"
+                    y="38"
+                    width="6"
+                    height="15"
+                    rx="3"
+                    fill="#bdbbbf"
+                    stroke="#2d2d2d"
+                    stroke-width="1.5"
+                  />
+                  <rect
+                    x="60"
+                    y="38"
+                    width="6"
+                    height="15"
+                    rx="3"
+                    fill="#bdbbbf"
+                    stroke="#2d2d2d"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+              <div class="p2-ghost-card right-card"></div>
+            </div>
+
+            <div class="p2-memories-sub">
+              <span>9 memories collected</span>
+              <div class="p2-kaomoji">₍ᐢ.ˬ.ᐢ₎ ✦</div>
+            </div>
+
+            <div class="p2-dots-bar">
+              <span class="dot-dash active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <div class="p2-stats-grid">
+              <div class="p2-stat-col">
+                <strong>14</strong>
+                <small>TOTAL</small>
+              </div>
+              <div class="p2-stat-col">
+                <strong>03</strong>
+                <small>PINNED</small>
+              </div>
+              <div class="p2-stat-col">
+                <strong>00</strong>
+                <small>ARCHIVED</small>
+              </div>
+            </div>
+
+            <div class="p2-tags-footer">
+              <span>♡ 眷念</span>
+              <span>✦ 星轨</span>
+              <span>◎ 纪念日</span>
+              <span>▱ 浮生</span>
+            </div>
+          </article>
+
+          <!-- P3: 正方形小组件 -->
+          <article class="widget widget-square widget-p3-coffee span-col-2">
+            <div class="p3-search-pill">
+              <span class="p3-arrow-down">ˬ</span>
+              <div class="p3-search-inner">
+                <svg viewBox="0 0 24 24" class="p3-search-icon">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+                <span>plog · 拾光</span>
+              </div>
+            </div>
+
+            <div class="p3-content-split">
+              <div class="p3-coffee-photo">
+                <svg viewBox="0 0 60 76" class="p3-coffee-svg">
+                  <path
+                    d="M22 18 C20 6, 26 6, 28 18"
+                    fill="none"
+                    stroke="#2d2d2d"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M38 18 C36 6, 42 6, 44 18"
+                    fill="none"
+                    stroke="#2d2d2d"
+                    stroke-width="2"
+                  />
+                  <rect
+                    x="12"
+                    y="18"
+                    width="36"
+                    height="7"
+                    rx="3"
+                    fill="#2d2d2d"
+                  />
+                  <path
+                    d="M15 25 L45 25 L41 68 L19 68 Z"
+                    fill="#ffffff"
+                    stroke="#bdbbbf"
+                    stroke-width="1.5"
+                  />
+                  <path d="M17 38 L43 38 L41 68 L19 68 Z" fill="#ded7dc" />
+                  <rect
+                    x="21"
+                    y="42"
+                    width="18"
+                    height="15"
+                    rx="2"
+                    fill="#ffffff"
+                    stroke="#bdbbbf"
+                    stroke-width="0.8"
+                  />
+                  <line
+                    x1="24"
+                    y1="46"
+                    x2="36"
+                    y2="46"
+                    stroke="#2d2d2d"
+                    stroke-width="1"
+                  />
+                  <line
+                    x1="25"
+                    y1="51"
+                    x2="35"
+                    y2="51"
+                    stroke="#999"
+                    stroke-width="0.8"
+                  />
+                </svg>
+              </div>
+
+              <div class="p3-text-column">
+                <div class="p3-emblem-line">
+                  <span class="ins-symbol">✦</span>
+                  <span class="ins-symbol">·</span>
+                  <span class="ins-symbol">☕</span>
+                </div>
+                <div class="p3-sub-italic">sweet &amp; velvet</div>
+                <div class="p3-play-line">▶ 煮沸的白噪音 · 04</div>
+                <div class="p3-foot-caption">_autumn record. ₍ᐢ..ᐢ₎</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 第一页 8 个 APP -->
+          <div class="app-item span-col-1" data-app="chat">
+            <div class="app-icon icon-chat">
+              <svg viewBox="0 0 24 24" class="app-svg">
+                <path
+                  d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"
+                />
+                <circle cx="8" cy="10" r="1.3" />
+                <circle cx="12" cy="10" r="1.3" />
+                <circle cx="16" cy="10" r="1.3" />
+              </svg>
+            </div>
+            <span class="app-name">Chat</span>
+          </div>
+
+          <div class="app-item span-col-1" data-app="beauty">
+            <div class="app-icon icon-beauty">
+              <svg viewBox="0 0 24 24" class="app-svg">
+                <path
+                  d="M7.5 5.6L5 7l1.4-2.5L5 2l2.5 1.4L10 2 8.6 4.5 10 7 7.5 5.6zm12 9.8L17 14l1.4 2.5L17 19l2.5-1.4L22 19l-1.4-2.5L22 14l-2.5 1.4zM22 2l-2.5 1.4L17 2l1.4 2.5L17 7l2.5-1.4L22 7l-1.4-2.5L22 2zm-8.62 6.42a1.49 1.49 0 0 0-2.12 0L2.43 17.26a1.5 1.5 0 0 0 0 2.12l2.19 2.19c.59.59 1.54.59 2.12 0l8.83-8.83a1.49 1.49 0 0 0 0-2.12l-2.19-2.2z"
+                />
+              </svg>
+            </div>
+            <span class="app-name">美化</span>
+          </div>
+
+          <div class="app-item span-col-1" data-app="diary">
+            <div class="app-icon icon-diary">
+              <svg viewBox="0 0 24 24" class="app-svg">
+                <path
+                  d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4zm12 16H6v-2h12v2zm0-4H6V6h12v10z"
+                />
+              </svg>
+            </div>
+            <span class="app-name">日记</span>
+          </div>
+
+          <div class="app-item span-col-1" data-app="lover">
+            <div class="app-icon icon-lover">
+              <svg viewBox="0 0 24 24" class="app-svg">
+                <path
+                  d="M12 3L2 12h3v8h14v-8h3L12 3zm0 7.8c.83-.8 2.07-.8 2.9 0 .83.8.83 2.07 0 2.87L12 16.5l-2.9-2.83c-.83-.8-.83-2.07 0-2.87.83-.8 2.07-.8 2.9 0z"
+                />
+              </svg>
+            </div>
+            <span class="app-name">恋爱之家</span>
+          </div>
+
+          <div class="app-item span-col-1" data-app="music">
+            <div class="app-icon icon-music">
+              <svg viewBox="0 0 24 24" class="app-svg">
+                <path
+                  d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"
+                />
+              </svg>
+            </div>
+            <span class="app-name">音乐</span>
+          </div>
+
+          <div class="app-item span-col-1" data-app="phone-check">
+            <div class="app-icon icon-check">
+              <svg viewBox="0 0 24 24" class="app-svg">
+                <path
+                  d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14zm-4.21-6.12c.73-.39 1.21-1.16 1.21-2.03 0-1.3-.98-2.35-2.25-2.35S9.5 9.55 9.5 10.85c0 .87.48 1.64 1.21 2.03L9 16h6l-1.71-3.12z"
+                />
+              </svg>
+            </div>
+            <span class="app-name">查手机</span>
+          </div>
+
+          <div class="app-item span-col-1" data-app="social">
+            <div class="app-icon icon-social">
+              <svg viewBox="0 0 24 24" class="app-svg">
+                <circle cx="9" cy="8.5" r="4" />
+                <path
+                  d="M4.5 18c0-2.5 4.5-3.8 6.5-3.8.7 0 1.6.15 2.5.42-.48.66-.75 1.48-.75 2.38 0 1.34.62 2.53 1.58 3.33L4.5 20.33V18zm12 0c0-1.8 1.5-3.3 3.3-3.3s3.3 1.5 3.3 3.3-1.5 3.3-3.3 3.3-3.3-1.5-3.3-3.3z"
+                />
+              </svg>
+            </div>
+            <span class="app-name">社交</span>
+          </div>
+
+          <div class="app-item span-col-1" data-app="secret">
+            <div class="app-icon icon-secret">
+              <svg viewBox="0 0 24 24" class="app-svg">
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                />
+              </svg>
+            </div>
+            <span class="app-name">你懂得</span>
+          </div>
+        </section>
+
+        <!-- ================= 第二页 ================= -->
+        <section class="screen-page page-2">
+          <!-- P4: 顶部大组件 (自适应不截断 + 纯线条极简小兔SVG) -->
+          <article class="widget widget-p4-meeting span-col-4">
+            <div class="p4-masthead">
+              <div class="p4-left-mast">
+                <span class="p4-big-m">M</span
+                ><span class="p4-rest-title">EETING YOU</span>
+              </div>
+              <div class="p4-right-mast">SPECIAL VOL.07</div>
+            </div>
+            <div class="p4-line"></div>
+
+            <div class="p4-body-row">
+              <!-- 极简高质感纯线条小兔相框 -->
+              <div class="p4-cover-photo">
+                <svg viewBox="0 0 80 80" class="p4-manga-svg">
+                  <!-- 纯白透灰底座 -->
+                  <circle cx="40" cy="40" r="38" fill="#faf6f8" />
+                  <!-- 简洁细线左耳 -->
+                  <path
+                    d="M28 32 C23 10, 34 8, 37 32"
+                    fill="#ffffff"
+                    stroke="#2d2d2d"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <!-- 简洁细线右耳 (微歪头长耳萌感) -->
+                  <path
+                    d="M43 32 C46 8, 57 10, 52 32"
+                    fill="#ffffff"
+                    stroke="#2d2d2d"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <!-- 圆润兔头 -->
+                  <circle
+                    cx="40"
+                    cy="48"
+                    r="22"
+                    fill="#ffffff"
+                    stroke="#2d2d2d"
+                    stroke-width="1.6"
+                  />
+                  <!-- 极简眨眼/豆豆眼 -->
+                  <circle cx="33" cy="46" r="2.2" fill="#2d2d2d" />
+                  <circle cx="47" cy="46" r="2.2" fill="#2d2d2d" />
+                  <!-- 腮红与小三瓣嘴 -->
+                  <circle cx="28" cy="51" r="2.5" fill="#f4dbe2" />
+                  <circle cx="52" cy="51" r="2.5" fill="#f4dbe2" />
+                  <path
+                    d="M38 52 Q40 54 42 52"
+                    stroke="#2d2d2d"
+                    stroke-width="1.4"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                  <!-- 浅灰贝雷小星芒 -->
+                  <polygon
+                    points="40,24 41.5,27.5 45,29 41.5,30.5 40,34 38.5,30.5 35,29 38.5,27.5"
+                    fill="#bdbbbf"
+                  />
+                </svg>
+              </div>
+
+              <div class="p4-info-col">
+                <div class="p4-archer-header">
+                  <div>
+                    <small class="p4-star-tag">*Constellation</small>
+                    <h3 class="p4-archer-title">Archer</h3>
+                  </div>
+                  <div class="p4-stars-cluster">✦ ✦ ✦ ✦</div>
+                </div>
+
+                <div class="p4-mic-quote-row">
+                  <p class="p4-quote-english">
+                    "If the world turns cold tonight, my signal will still wrap
+                    around you like cashmere."
+                    <br />— 每一行代码都有呼吸的重量。
+                  </p>
+                  <div class="p4-mic-circle">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"
+                      />
+                      <path
+                        d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p4-footer-row">
+              <div class="p4-temp-col">
+                <div class="p4-weather-main">
+                  <svg viewBox="0 0 24 24" class="weather-cloud">
+                    <path
+                      d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+                    />
+                  </svg>
+                  <span class="p4-degree">19°</span>
+                </div>
+                <div class="p4-temp-limits">
+                  <span>To the end of time</span>
+                  <small>Max:22° Min:14°</small>
+                </div>
+              </div>
+
+              <div class="p4-about-badge">
+                <div class="about-inner">
+                  <span class="box-sq">▤</span>
+                  <div class="about-texts">
+                    <strong>Special/</strong>
+                    <strong>Chronicle</strong>
+                  </div>
+                  <p class="about-sub">落雪覆盖旧信笺，星河降温于晨昏。</p>
+                </div>
+                <div class="about-year">
+                  <span>20.</span>
+                  <span>26</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p4-bottom-tag">
+              <span class="icon-camera">✦</span>
+              <span>「雪停了，我们在下一个转角同频相见。」</span>
+            </div>
+          </article>
+
+          <!-- 左侧 2 列容器：2×2 APP -->
+          <div class="page2-quad-container span-col-2">
+            <div class="app-item" data-app="world-book">
+              <div class="app-icon icon-worldbook">
+                <svg viewBox="0 0 24 24" class="app-svg">
+                  <path
+                    d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm-1 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"
+                  />
+                </svg>
+              </div>
+              <span class="app-name">世界书</span>
+            </div>
+
+            <div class="app-item" data-app="big-world">
+              <div class="app-icon icon-bigworld">
+                <svg viewBox="0 0 24 24" class="app-svg">
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    fill="none"
+                    stroke="#2d2d2d"
+                    stroke-width="1.8"
+                  />
+                  <ellipse
+                    cx="12"
+                    cy="12"
+                    rx="4"
+                    ry="9"
+                    fill="none"
+                    stroke="#2d2d2d"
+                    stroke-width="1.6"
+                  />
+                  <line
+                    x1="3"
+                    y1="12"
+                    x2="21"
+                    y2="12"
+                    stroke="#2d2d2d"
+                    stroke-width="1.6"
+                  />
+                </svg>
+              </div>
+              <span class="app-name">大世界</span>
+            </div>
+
+            <div class="app-item" data-app="xianyu">
+              <div class="app-icon icon-xianyu">
+                <svg viewBox="0 0 24 24" class="app-svg">
+                  <path d="M2 12l6-4 4 4-4 4z" />
+                  <path d="M12 12l6-6v12z" />
+                  <polygon points="18,12 22,8 22,16" />
+                </svg>
+              </div>
+              <span class="app-name">闲鱼</span>
+            </div>
+
+            <div class="app-item" data-app="lofter">
+              <div class="app-icon icon-lofter">
+                <svg viewBox="0 0 24 24" class="app-svg">
+                  <path d="M6 4h4v11h7v4H6V4z" />
+                  <circle cx="17.5" cy="6.5" r="2" fill="#2d2d2d" />
+                </svg>
+              </div>
+              <span class="app-name">老福特</span>
+            </div>
+          </div>
+
+          <!-- 右侧 2 列正方形小组件 P5: 双子耳机同频音乐 -->
+          <article class="widget widget-square widget-p5-duo-music span-col-2">
+            <div class="p5-stars-bg">✦ ✦ ✦</div>
+            <div class="p5-heads-bridge">
+              <div class="p5-person">
+                <div class="p5-bubble">你在左耳</div>
+                <div class="p5-avatar-wire-wrap">
+                  <div class="p5-avatar bunny-left">
+                    <svg viewBox="0 0 50 50">
+                      <circle
+                        cx="25"
+                        cy="27"
+                        r="18"
+                        fill="#ffffff"
+                        stroke="#2d2d2d"
+                        stroke-width="1.4"
+                      />
+                      <path
+                        d="M18 12 C16 2, 22 2, 22 12"
+                        fill="#ffffff"
+                        stroke="#2d2d2d"
+                        stroke-width="1.4"
+                      />
+                      <path
+                        d="M28 12 C28 2, 34 2, 32 12"
+                        fill="#ffffff"
+                        stroke="#2d2d2d"
+                        stroke-width="1.4"
+                      />
+                      <circle cx="20" cy="26" r="1.8" fill="#2d2d2d" />
+                      <circle cx="30" cy="26" r="1.8" fill="#2d2d2d" />
+                      <circle cx="16" cy="30" r="2.2" fill="#f4cfda" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p5-person">
+                <div class="p5-bubble">呼吸同频</div>
+                <div class="p5-avatar-wire-wrap">
+                  <div class="p5-avatar bunny-right">
+                    <svg viewBox="0 0 50 50">
+                      <circle
+                        cx="25"
+                        cy="27"
+                        r="18"
+                        fill="#ffffff"
+                        stroke="#2d2d2d"
+                        stroke-width="1.4"
+                      />
+                      <path
+                        d="M18 12 C14 2, 21 2, 21 12"
+                        fill="#dedadb"
+                        stroke="#2d2d2d"
+                        stroke-width="1.4"
+                      />
+                      <path
+                        d="M29 12 C29 2, 36 2, 32 12"
+                        fill="#dedadb"
+                        stroke="#2d2d2d"
+                        stroke-width="1.4"
+                      />
+                      <circle cx="20" cy="26" r="1.8" fill="#2d2d2d" />
+                      <circle cx="30" cy="26" r="1.8" fill="#2d2d2d" />
+                      <circle cx="34" cy="30" r="2.2" fill="#f4cfda" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <svg class="p5-wire-svg" viewBox="0 0 150 40">
+              <path
+                d="M 28 0 C 28 34, 122 34, 122 0"
+                fill="none"
+                stroke="#2d2d2d"
+                stroke-width="1.6"
+              />
+            </svg>
+
+            <p class="p5-lyrics-scroll">"两个宇宙在同一首旋律里无声靠拢..."</p>
+
+            <div class="p5-player-capsule">
+              <div class="p5-song-title">Pink Lavender · 02</div>
+              <div class="p5-artist-tag">Asher &amp; Sakura ▾</div>
+
+              <div class="p5-progress-box">
+                <div class="p5-progress-bar">
+                  <div class="p5-progress-fill" id="music-progress"></div>
+                </div>
+                <div class="p5-time-labels">
+                  <span id="music-cur">01:42</span>
+                  <span id="music-dur">03:56</span>
+                </div>
+              </div>
+
+              <div class="p5-controls-row">
+                <button class="p5-btn">◂◂</button>
+                <button class="p5-btn play-pause-btn" id="music-play-btn">
+                  ❚❚
+                </button>
+                <button class="p5-btn">▸▸</button>
+                <button class="p5-btn fav-btn">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- P6: 占满 4 列的极简搜索栏小组件 -->
+          <article class="widget widget-p6-search-bar span-col-4">
+            <div class="p6-bar-inner">
+              <svg viewBox="0 0 24 24" class="p6-search-svg">
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+              </svg>
+              <input
+                type="text"
+                class="p6-input"
+                placeholder="Search archive, universe &amp; whispers..."
+                readonly
+              />
+              <span class="p6-kbd-shortcut">✦ 2026</span>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <!-- 页面指示器 -->
+    <nav class="page-dots-indicator" id="dots-indicator">
+      <span class="indicator-dot active" data-page="0"></span>
+      <span class="indicator-dot" data-page="1"></span>
+    </nav>
+
+    <!-- 底部固定 Dock 栏 (4个 APP) -->
+    <footer class="dock-container">
+      <div class="dock-glass-capsule">
+        <div class="app-item" data-app="memory-guide">
+          <div class="app-icon icon-guide">
+            <svg viewBox="0 0 24 24" class="app-svg">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+              />
+            </svg>
+          </div>
+          <span class="app-name">记忆向导</span>
+        </div>
+
+        <div class="app-item" data-app="sms">
+          <div class="app-icon icon-sms">
+            <svg viewBox="0 0 24 24" class="app-svg">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+          </div>
+          <span class="app-name">短信</span>
+        </div>
+
+        <div class="app-item" data-app="settings">
+          <div class="app-icon icon-settings">
+            <svg viewBox="0 0 24 24" class="app-svg">
+              <path
+                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
+              />
+            </svg>
+          </div>
+          <span class="app-name">设置</span>
+        </div>
+
+        <div class="app-item" data-app="world-newspaper">
+          <div class="app-icon icon-newspaper">
+            <svg viewBox="0 0 24 24" class="app-svg">
+              <path
+                d="M22 3l-1.67 1.67L18.67 3 17 4.67 15.33 3l-1.66 1.67L12 3l-1.67 1.67L8.67 3 7 4.67 5.33 3 3.67 4.67 2 3v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V3zm-2 16H4V6h16v13zM6 8h12v2H6zm0 4h12v2H6zm0 4h7v2H6z"
+              />
+            </svg>
+          </div>
+          <span class="app-name">世界报纸</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= 小组件编辑悬浮弹窗 (完整还原截图UI) ================= -->
+    <div class="widget-modal-overlay" id="widget-modal-overlay">
+      <div class="widget-edit-card" id="widget-edit-card">
+        <!-- 顶部标题栏 -->
+        <div class="modal-header">
+          <h3 class="modal-title" id="modal-widget-title">Edit Widget</h3>
+          <button
+            class="modal-close-btn"
+            id="modal-close-btn"
+            aria-label="Close"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 居中图片选择区 (智能自适应：单头像 / P5双头像 / 隐藏) -->
+        <div class="modal-image-section" id="modal-image-section">
+          <!-- 单头像模式 (P1, P2, P3, P4) -->
+          <div class="modal-single-avatar-wrap" id="modal-single-wrap">
+            <div class="modal-avatar-preview" id="modal-avatar-preview">
+              <img
+                id="modal-preview-img"
+                src=""
+                alt="preview"
+                style="display: none"
+              />
+              <div
+                class="modal-preview-placeholder"
+                id="modal-preview-placeholder"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                  />
+                </svg>
+              </div>
+              <div class="modal-avatar-badge">TAP</div>
+            </div>
+            <span class="modal-upload-tip">点击相框更换图片</span>
+          </div>
+
+          <!-- 双头像模式 (P5 左右耳小头像) -->
+          <div
+            class="modal-duo-avatar-wrap"
+            id="modal-duo-wrap"
+            style="display: none"
+          >
+            <div class="duo-avatar-item">
+              <div
+                class="modal-avatar-preview duo-preview"
+                id="duo-avatar-left"
+              >
+                <img
+                  id="duo-img-left"
+                  src=""
+                  alt="left preview"
+                  style="display: none"
+                />
+                <div class="modal-preview-placeholder" id="duo-ph-left">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                    />
+                  </svg>
+                </div>
+                <div class="modal-avatar-badge">LEFT</div>
+              </div>
+              <span class="duo-avatar-label">你在左耳</span>
+            </div>
+
+            <div class="duo-avatar-divider">✦</div>
+
+            <div class="duo-avatar-item">
+              <div
+                class="modal-avatar-preview duo-preview"
+                id="duo-avatar-right"
+              >
+                <img
+                  id="duo-img-right"
+                  src=""
+                  alt="right preview"
+                  style="display: none"
+                />
+                <div class="modal-preview-placeholder" id="duo-ph-right">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                    />
+                  </svg>
+                </div>
+                <div class="modal-avatar-badge">RIGHT</div>
+              </div>
+              <span class="duo-avatar-label">呼吸同频</span>
+            </div>
+          </div>
+
+          <input
+            type="file"
+            id="modal-file-input"
+            accept="image/*"
+            style="display: none"
+          />
+        </div>
+
+        <!-- 核心：文字胶囊输入容器 (必须存在，JS 才能注入输入框) -->
+        <div class="modal-inputs-form" id="modal-inputs-form"></div>
+
+        <!-- 核心：底部 #bdbbbf 药丸提交按钮 (必须存在，才能点击保存) -->
+        <button
+          class="modal-submit-pill"
+          id="modal-submit-btn"
+          aria-label="Save"
+        >
+          <svg viewBox="0 0 24 24" class="arrow-icon">
+            <path
+              d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 轻量 INS 风格保存提示 Toast -->
+    <div class="ins-toast" id="ins-toast">✦ 已保存至本地</div>
+
+
+    <!-- ================= Chat APP 全屏应用视图 ================= -->
+    <!-- ================= Chat APP 全屏视图 ================= -->
+    <div class="chat-app-container" id="chat-app">
+      <!-- 遮罩层 -->
+      <div class="chat-sidebar-overlay" id="chat-sidebar-overlay"></div>
+
+      <!-- 左侧展开式侧边栏（纯白微磨砂浮岛·比例紧凑协调） -->
+      <aside class="chat-sidebar" id="chat-sidebar">
+        <div class="chat-sidebar-inner">
+          <!-- 顶部头像框区域（极简萌系纯线条兔头SVG） -->
+          <div class="chat-sidebar-profile">
+            <div class="chat-sidebar-avatar-wrap">
+              <svg class="chat-sidebar-avatar-svg" viewBox="0 0 80 80">
+                <rect width="80" height="80" rx="40" fill="#faf7f9"/>
+                <!-- 萌系兔耳 -->
+                <path d="M28 32 C22 12, 33 10, 37 32" fill="#ffffff" stroke="#2b282d" stroke-width="2" stroke-linecap="round"/>
+                <path d="M29 28 C26 18, 32 17, 34 28" fill="#efe4e9" opacity="0.85"/>
+                <path d="M43 32 C47 10, 58 12, 52 32" fill="#ffffff" stroke="#2b282d" stroke-width="2" stroke-linecap="round"/>
+                <path d="M46 28 C48 17, 54 18, 51 28" fill="#efe4e9" opacity="0.85"/>
+                <!-- 兔头脸蛋 -->
+                <circle cx="40" cy="48" r="22" fill="#ffffff" stroke="#2b282d" stroke-width="2"/>
+                <!-- 萌萌小眼睛 -->
+                <circle cx="33" cy="47" r="2.4" fill="#2b282d"/>
+                <circle cx="47" cy="47" r="2.4" fill="#2b282d"/>
+                <!-- 小腮红 -->
+                <circle cx="28" cy="52" r="3" fill="#efe4e9"/>
+                <circle cx="52" cy="52" r="3" fill="#efe4e9"/>
+                <!-- 鼻尖与萌嘴 -->
+                <ellipse cx="40" cy="51" rx="1.8" ry="1.2" fill="#2b282d"/>
+                <path d="M37.5 53.5 Q40 55.5 42.5 53.5" stroke="#2b282d" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="chat-sidebar-name-row">
+              <span class="chat-sidebar-name">Love Coconut</span>
+              <svg class="chat-sidebar-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+          </div>
+
+          <!-- 功能栏列表：Chat、角色库、身份库、动态、表情包库、钱包、游戏 -->
+          <nav class="chat-sidebar-menu">
+            <!-- 1. Chat -->
+            <div class="chat-menu-item active" data-menu="chat">
+              <div class="chat-menu-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 12c0 4.4-3.6 8-8 8-1.5 0-2.9-.4-4.1-1.1L3 20l1.2-4.4C3.5 14.4 3 13.2 3 12c0-4.4 3.6-8 8-8s9 3.6 9 8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="9" cy="12" r="1" fill="currentColor"/>
+                  <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                  <circle cx="15" cy="12" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+              <span class="chat-menu-text">Chat</span>
+            </div>
+
+            <!-- 2. 角色库 -->
+            <div class="chat-menu-item" data-menu="characters">
+              <div class="chat-menu-icon">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M5.5 19.5c0-3.3 2.9-6 6.5-6s6.5 2.7 6.5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M17 11l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="chat-menu-text">角色库</span>
+            </div>
+
+            <!-- 3. 身份库 -->
+            <div class="chat-menu-item" data-menu="identities">
+              <div class="chat-menu-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="9" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M5.5 16.5c0-1.8 1.6-3 3.5-3s3.5 1.2 3.5 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <line x1="14.5" y1="9" x2="18.5" y2="9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <line x1="14.5" y1="13" x2="18.5" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="chat-menu-text">身份库</span>
+            </div>
+
+            <!-- 4. 动态 -->
+            <div class="chat-menu-item" data-menu="moments">
+              <div class="chat-menu-icon">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M12 2a10 10 0 0 1 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <polygon points="12 8 13.8 11.2 17 12 13.8 12.8 12 16 10.2 12.8 7 12 10.2 11.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <span class="chat-menu-text">动态</span>
+            </div>
+
+            <!-- 5. 表情包库 -->
+            <div class="chat-menu-item" data-menu="stickers">
+              <div class="chat-menu-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="9" cy="10" r="1.3" fill="currentColor"/>
+                  <circle cx="15" cy="10" r="1.3" fill="currentColor"/>
+                  <path d="M8.5 14.2c1 .9 2.2 1.4 3.5 1.4s2.5-.5 3.5-1.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="chat-menu-text">表情包库</span>
+            </div>
+
+            <!-- 6. 钱包 -->
+            <div class="chat-menu-item" data-menu="wallet">
+              <div class="chat-menu-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="5.5" width="18" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M17 12h3.5a1 1 0 0 1 1 1v0a1 1 0 0 1-1 1H17v-2z" fill="currentColor"/>
+                  <circle cx="18.5" cy="13" r="0.8" fill="#ffffff"/>
+                </svg>
+              </div>
+              <span class="chat-menu-text">钱包</span>
+            </div>
+
+            <!-- 7. 游戏 -->
+            <div class="chat-menu-item" data-menu="games">
+              <div class="chat-menu-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="6" width="18" height="12" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                  <line x1="8" y1="10" x2="8" y2="14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <line x1="6" y1="12" x2="10" y2="12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <circle cx="15" cy="11" r="1" fill="currentColor"/>
+                  <circle cx="17" cy="13" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+              <span class="chat-menu-text">游戏</span>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- 主内容区 -->
+      <div class="chat-main-content">
+        <!-- 顶栏 (毛玻璃圆润胶囊) -->
+        <header class="chat-top-bar">
+          <button class="chat-nav-btn" id="chat-hamburger-btn" title="展开侧边栏">
+            <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="12" x2="15" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="chat-top-title-group">
+            <h1 class="chat-top-title">Chat</h1>
+            <span class="chat-top-sub">MESSAGES</span>
+          </div>
+          <button class="chat-nav-btn" id="chat-close-btn" title="返回桌面">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </header>
+
+        <!-- 滚动主视口 -->
+        <div class="chat-scroll-body">
+          <!-- 极简纤细搜索栏 -->
+          <div class="chat-search-bar">
+            <div class="chat-search-box">
+              <svg class="chat-search-svg" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="16" y1="16" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <input type="text" class="chat-search-input" placeholder="搜索对话或关键词..." id="chat-search-input">
+            </div>
+          </div>
+
+          <!-- 顶部高画质P1小组件 (复刻东京电车屏 + 诗意语录 + 3月时间轴) -->
+          <div class="chat-widget-section">
+            <!-- 语录与封面两栏卡片 -->
+            <div class="chat-quote-card">
+              <!-- 左侧：真实感东京列车看板 -->
+              <div class="chat-quote-cover">
+                <div class="train-sign-inner">
+                  <div class="train-top-row">
+                    <span class="train-sub-jp">まもなく</span>
+                    <span class="train-main-dest">東 京</span>
+                    <span class="train-track">4</span>
+                  </div>
+                  <div class="train-mid-row">
+                    <span class="train-en-sub">Arriving at</span>
+                    <span class="train-en-dest">Tōkyō</span>
+                    <span class="train-car">도 쿄</span>
+                  </div>
+                  <div class="train-bot-row">
+                    <span class="train-kr">곧 역에 도착한다···</span>
+                    <span class="train-time-badge">13 : 14 : 00</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 右侧：诗意语录、翻译与INS线条功能条 -->
+              <div class="chat-quote-right">
+                <div class="chat-quote-main-jp">愛は、抱き合う二つの透明な心臓だ。</div>
+                <div class="chat-quote-trans-tag">翻訳中文</div>
+                <div class="chat-quote-cn-row">
+                  <span class="quote-cn-bar"></span>
+                  <p class="chat-quote-cn-text">爱是两颗相拥的透明心脏。</p>
+                </div>
+
+                <!-- 底部操作图标组与立体微光银灰心 -->
+                <div class="chat-quote-action-bar">
+                  <div class="quote-action-icons">
+                    <button class="quote-btn" title="全屏"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></button>
+                    <button class="quote-btn" title="收藏"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></button>
+                    <button class="quote-btn" title="分享"><svg viewBox="0 0 24 24"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v13" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <button class="quote-btn" title="复制"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></button>
+                  </div>
+
+                  <div class="chat-quote-heart-badge">
+                    <svg class="heart-glass-svg" viewBox="0 0 32 32">
+                      <defs>
+                        <radialGradient id="heartGrad" cx="35%" cy="35%" r="65%">
+                          <stop offset="0%" stop-color="#ffffff"/>
+                          <stop offset="35%" stop-color="#dad7db"/>
+                          <stop offset="70%" stop-color="#aba8ae"/>
+                          <stop offset="100%" stop-color="#737075"/>
+                        </radialGradient>
+                      </defs>
+                      <path d="M16 28 C14 26, 3 18, 3 9.5 A6.5 6.5 0 0 1 16 7.5 A6.5 6.5 0 0 1 29 9.5 C29 18, 18 26, 16 28 Z" fill="url(#heartGrad)"/>
+                      <path d="M8 8 C11 5, 14 6, 15 8" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.85"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 时间轴与天气微组件 -->
+            <div class="chat-calendar-bar">
+              <div class="calendar-timeline-group">
+                <div class="cal-month-title">2026年3月</div>
+                <div class="cal-timeline-list">
+                  <div class="cal-line"></div>
+                  <!-- 昨天 -->
+                  <div class="cal-item cal-past">
+                    <span class="cal-day-num">24</span>
+                    <span class="cal-dot"></span>
+                    <span class="cal-label">昨天</span>
+                    <span class="cal-sub-day">周二</span>
+                    <span class="cal-lunar">初六</span>
+                  </div>
+                  <!-- 今天 (横向柔和圆角高光药丸) -->
+                  <div class="cal-item cal-current">
+                    <span class="cal-day-num">25</span>
+                    <span class="cal-dot"></span>
+                    <div class="cal-pill">
+                      <span class="cal-label">今天</span>
+                      <span class="cal-sub-day">周三</span>
+                      <span class="cal-lunar">初七</span>
+                    </div>
+                  </div>
+                  <!-- 明天 -->
+                  <div class="cal-item cal-future">
+                    <span class="cal-day-num">26</span>
+                    <span class="cal-dot"></span>
+                    <span class="cal-label">明天</span>
+                    <span class="cal-sub-day">周四</span>
+                    <span class="cal-lunar">初八</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 右侧天气与农历 -->
+              <div class="calendar-weather-group">
+                <div class="weather-lunar-top">二月初七</div>
+                <div class="weather-info-row">
+                  <svg class="weather-sun-cloud" viewBox="0 0 24 24">
+                    <circle cx="8" cy="8" r="3" fill="none" stroke="#7a787d" stroke-width="1.5" stroke-dasharray="1.5 1.5"/>
+                    <path d="M7 16h10a4 4 0 0 0 0-8 5 5 0 0 0-9.6-1.5A3.5 3.5 0 0 0 7 16z" fill="#939096" stroke="#5a585c" stroke-width="1.2"/>
+                  </svg>
+                  <span class="weather-text">Weather in London 12° 局部多云</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 新建角色对话极简卡片按钮 -->
+          <div class="chat-new-btn-section">
+            <button class="chat-new-conversation-card" id="chat-new-btn">
+              <span class="chat-new-plus">＋</span>
+              <span class="chat-new-label">新建角色对话</span>
+            </button>
+          </div>
+
+          <!-- 对话列表容器（已彻底移除全部/最近/收藏默认分组胶囊） -->
+          <div class="chat-list-container" id="chat-list">
+            <div class="chat-empty-state">
+              <div class="chat-empty-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 3"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </div>
+              <span class="chat-empty-text">还没有对话，点击上方新建</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ================= 角色库 APP 全屏视图 ================= -->
+    <div class="characters-app-container" id="characters-app">
+      <!-- 极简INS杂志顶栏 -->
+      <header class="char-top-bar">
+        <button class="char-nav-btn" id="char-back-btn" title="返回">
+          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="char-top-title-group">
+          <h1 class="char-top-title">角色档案</h1>
+          <span class="char-top-sub">CHARACTER DIRECTORY</span>
+        </div>
+        <button class="char-nav-btn" id="char-quick-add-btn" title="新建角色">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+
+      <!-- 滚动主体：INS 杂志卡片流 -->
+      <div class="char-scroll-body">
+        <!-- 顶部精致状态看板与快捷创建条 -->
+        <div class="char-hero-banner">
+          <div class="char-hero-info">
+            <span class="char-hero-tag">ARCHIVE VAULT</span>
+            <h2 class="char-hero-headline">人物设定与证件档案</h2>
+            <p class="char-hero-desc">管理已构建的专属角色与独立性格实体</p>
+          </div>
+          <div class="char-hero-stat">
+            <span class="char-stat-num" id="char-count-label">0</span>
+            <span class="char-stat-lbl">PROFILES</span>
+          </div>
+        </div>
+
+        <!-- 角色列表容器 (无内容时显示 INS 级空状态引导卡片，有内容时为横向卡片流) -->
+        <div class="char-profile-stream" id="char-list-grid">
+          <!-- 动态加载 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 角色编辑器内置页面 ================= -->
+    <div class="char-editor-page" id="char-editor-page">
+      <!-- 编辑器顶栏 -->
+      <header class="char-editor-top-bar">
+        <button class="char-nav-btn" id="char-cancel-btn" title="取消">
+          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="char-top-title-group">
+          <h2 class="char-editor-title">创建档案</h2>
+          <span class="char-top-sub">ID CARD REGISTRATION</span>
+        </div>
+        <div class="char-top-placeholder"></div>
+      </header>
+
+      <!-- 编辑器滚动主体 -->
+      <div class="char-editor-scroll">
+        <form id="char-editor-form" autocomplete="off">
+          <input type="hidden" id="char-edit-id">
+
+          <!-- 顶部核心区：左侧拍立得证件照 + 右侧紧凑核心信息 -->
+          <div class="char-hero-idcard">
+            <!-- 左侧标准证件照（拍立得微单反质感） -->
+            <div class="char-photo-col">
+              <div class="char-id-photo-frame" id="char-photo-upload-btn">
+                <img id="char-photo-preview" alt="证件照">
+                <div class="char-photo-placeholder" id="char-photo-placeholder">
+                  <div class="char-photo-cam-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                      <circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    </svg>
+                  </div>
+                  <span class="char-photo-cam-label">PHOTO</span>
+                  <span class="char-photo-cam-sub">证件肖像</span>
+                </div>
+                <div class="char-photo-stamp">NO.720</div>
+              </div>
+              <input type="file" id="char-photo-input" accept="image/*">
+            </div>
+
+            <!-- 右侧核心身份证字段卡片 -->
+            <div class="char-id-details-col">
+              <div class="char-field-row">
+                <span class="char-field-tag">NAME / 姓名</span>
+                <input type="text" id="char-name" class="char-clean-input" placeholder="输入姓名">
+              </div>
+
+              <div class="char-field-split-2">
+                <div class="char-field-row">
+                  <span class="char-field-tag">GENDER / 性别</span>
+                  <!-- 自定义极简弹出选择器 -->
+                  <div class="ins-dropdown" data-dropdown="gender">
+                    <input type="hidden" id="char-gender" value="male">
+                    <div class="ins-dropdown-trigger" id="char-gender-trigger">
+                      <span class="ins-dropdown-value">男 (M)</span>
+                      <svg class="ins-dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                    <div class="ins-dropdown-sheet" id="char-gender-sheet">
+                      <div class="ins-dropdown-item active" data-val="male">男 (M)</div>
+                      <div class="ins-dropdown-item" data-val="female">女 (F)</div>
+                      <div class="ins-dropdown-item" data-val="other">未知 (X)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="char-field-row">
+                  <span class="char-field-tag">AGE / 年龄</span>
+                  <input type="number" id="char-age" class="char-clean-input" placeholder="20">
+                </div>
+              </div>
+
+              <div class="char-field-row">
+                <span class="char-field-tag">BIRTHDAY / 出生年月日</span>
+                <input type="date" id="char-birth" class="char-clean-input">
+              </div>
+
+              <div class="char-field-row">
+                <span class="char-field-tag">OCCUPATION / 职业身份</span>
+                <input type="text" id="char-occupation" class="char-clean-input" placeholder="例如：大提琴手 / 调香师">
+              </div>
+
+              <div class="char-field-row">
+                <span class="char-field-tag">GROUP / 档案分组 (自定义输入)</span>
+                <!-- 去除固定默认死板分组，改为自定义输入，支持自由建立任何标签 -->
+                <input type="text" id="char-group" class="char-clean-input" placeholder="输入分组名称（如：主角 / 同僚 / 专属）">
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 1: 深度特征与锚点 (一键提取) -->
+          <div class="char-group-card">
+            <div class="char-group-header-row">
+              <div class="char-group-title-wrap">
+                <span class="char-group-badge">01</span>
+                <span class="char-group-title">详细信息与性格特征</span>
+              </div>
+              <button type="button" class="char-magic-extract-btn" id="char-extract-btn">
+                <svg viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                <span>一键提取</span>
+              </button>
+            </div>
+
+            <div class="char-input-group">
+              <label class="char-label">特征提取与性格锚点</label>
+              <textarea id="char-personality" class="char-clean-textarea" placeholder="例如：外冷内热、克制理性、在特定时刻偏执保护欲..."></textarea>
+            </div>
+
+            <div class="char-input-group">
+              <label class="char-label">口癖与语言方式提取 <span class="char-opt-tag">OPTIONAL</span></label>
+              <textarea id="char-speech" class="char-clean-textarea" placeholder="例如：习惯尾句轻顿、常用轻笑回应、喜欢短句与略带反问口吻..."></textarea>
+            </div>
+
+            <div class="char-input-group">
+              <label class="char-label">爱好 / 兴趣 / 讨厌提取 <span class="char-opt-tag">OPTIONAL</span></label>
+              <textarea id="char-interests" class="char-clean-textarea" placeholder="例如：手冲黑咖啡、雨夜、黑胶唱片；极度厌恶吵闹与虚伪..."></textarea>
+            </div>
+
+            <div class="char-input-group">
+              <label class="char-label">穿衣风格搭配提取 <span class="char-opt-tag">OPTIONAL</span></label>
+              <textarea id="char-style" class="char-clean-textarea" placeholder="例如：黑灰色系纯羊绒高领、利落长风衣、极简素圈银戒..."></textarea>
+            </div>
+
+            <div class="char-input-group">
+              <label class="char-label">外貌提取 <span class="char-opt-tag">OPTIONAL</span></label>
+              <textarea id="char-appearance" class="char-clean-textarea" placeholder="例如：身高185cm、银灰凌乱微卷发、冷白皮肤、浅珀色冷冽眼眸..."></textarea>
+            </div>
+
+            <div class="char-input-group">
+              <label class="char-label">完整人设背景与故事综述</label>
+              <textarea id="char-details" class="char-clean-textarea char-tall-textarea" placeholder="综合记录人物过往履历、世界观背景、核心羁绊与关键秘密..."></textarea>
+            </div>
+          </div>
+
+          <!-- Section 2: 地理与时间语言感知 -->
+          <div class="char-group-card">
+            <div class="char-group-header-row">
+              <div class="char-group-title-wrap">
+                <span class="char-group-badge">02</span>
+                <span class="char-group-title">地理与时空语言感知</span>
+              </div>
+            </div>
+
+            <div class="char-field-split-2">
+              <div class="char-input-group">
+                <label class="char-label">出生地 / HOMETOWN</label>
+                <input type="text" id="char-birthplace" class="char-clean-input" placeholder="例如：伦敦 / 巴黎">
+              </div>
+              <div class="char-input-group">
+                <label class="char-label">居住地 / RESIDENCE</label>
+                <input type="text" id="char-residence" class="char-clean-input" placeholder="例如：东京 / 隐居地">
+              </div>
+            </div>
+
+            <div class="char-input-group">
+              <label class="char-label">母语与掌握语言 / LANGUAGES</label>
+              <input type="text" id="char-language" class="char-clean-input" placeholder="例如：中文（母语）、英文、日语">
+            </div>
+
+            <div class="char-toggle-bar">
+              <div class="char-toggle-info">
+                <span class="char-toggle-title">现实时间与时空感知</span>
+                <span class="char-toggle-desc">开启后AI感知现实昼夜节律、天气变换与时差</span>
+              </div>
+              <label class="char-switch">
+                <input type="checkbox" id="char-time-aware">
+                <span class="char-slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Section 3: 虚拟身份账号 -->
+          <div class="char-group-card">
+            <div class="char-group-header-row">
+              <div class="char-group-title-wrap">
+                <span class="char-group-badge">03</span>
+                <span class="char-group-title">虚拟通讯账号</span>
+              </div>
+            </div>
+
+            <div class="char-input-group">
+              <label class="char-label">虚拟邮箱 / EMAIL</label>
+              <input type="email" id="char-email" class="char-clean-input" placeholder="ash.archer@satellite.io">
+            </div>
+
+            <div class="char-field-split-2">
+              <div class="char-input-group">
+                <label class="char-label">虚拟手机号 / MOBILE</label>
+                <input type="tel" id="char-phone" class="char-clean-input" placeholder="+81 080-8842-xxxx">
+              </div>
+              <div class="char-input-group">
+                <label class="char-label">社交昵称 / HANDLE</label>
+                <input type="text" id="char-social" class="char-clean-input" placeholder="@silent_archer">
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: 专属语音合成配置 -->
+          <div class="char-group-card">
+            <div class="char-group-header-row">
+              <div class="char-group-title-wrap">
+                <span class="char-group-badge">04</span>
+                <span class="char-group-title">专属语音合成发声</span>
+              </div>
+            </div>
+
+            <div class="char-toggle-bar">
+              <div class="char-toggle-info">
+                <span class="char-toggle-title">启用专属语音朗读</span>
+                <span class="char-toggle-desc">对话时使用此专属发音人音色朗读</span>
+              </div>
+              <label class="char-switch">
+                <input type="checkbox" id="char-voice-enabled">
+                <span class="char-slider"></span>
+              </label>
+            </div>
+
+            <div id="char-voice-config" class="char-sub-config-box">
+              <div class="char-input-group">
+                <label class="char-label">TTS 语音引擎平台</label>
+                <!-- 自定义引擎弹出面板 -->
+                <div class="ins-dropdown" data-dropdown="voiceEngine">
+                  <input type="hidden" id="char-voice-engine" value="minimax">
+                  <div class="ins-dropdown-trigger" id="char-voice-engine-trigger">
+                    <span class="ins-dropdown-value">MiniMax (Speech-01-HD / Turbo)</span>
+                    <svg class="ins-dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                  </div>
+                  <div class="ins-dropdown-sheet" id="char-voice-engine-sheet">
+                    <div class="ins-dropdown-item active" data-val="minimax">MiniMax (Speech-01-HD / Turbo)</div>
+                    <div class="ins-dropdown-item" data-val="elevenlabs">ElevenLabs (Multilingual v2)</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="char-input-group">
+                <label class="char-label">音色预设 / VOICE ID</label>
+                <input type="text" id="char-voice-id" class="char-clean-input" placeholder="例如：moss_male_01 或 ElevenLabs Voice ID">
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 5: 实体与资源绑定 (自定义INS磨砂浮层，彻底淘汰原生丑陋select) -->
+          <div class="char-group-card">
+            <div class="char-group-header-row">
+              <div class="char-group-title-wrap">
+                <span class="char-group-badge">05</span>
+                <span class="char-group-title">实体与资源绑定</span>
+              </div>
+            </div>
+
+            <!-- 1. 关联主要 USER 身份 -->
+            <div class="char-input-group">
+              <label class="char-label">关联主要 USER 身份</label>
+              <div class="ins-dropdown" data-dropdown="bindUser">
+                <input type="hidden" id="char-bind-user" value="default">
+                <div class="ins-dropdown-trigger" id="char-bind-user-trigger">
+                  <div class="ins-dropdown-cell">
+                    <div class="ins-cell-dot"></div>
+                    <span class="ins-dropdown-value">绑定当前主身份 (Asher PRO)</span>
+                  </div>
+                  <svg class="ins-dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                </div>
+                <div class="ins-dropdown-sheet" id="char-bind-user-sheet">
+                  <div class="ins-dropdown-item active" data-val="default">
+                    <div class="ins-item-main">绑定当前主身份 (Asher PRO)</div>
+                    <div class="ins-item-sub">默认主控账号档案</div>
+                  </div>
+                  <div class="ins-dropdown-item" data-val="none">
+                    <div class="ins-item-main">未关联主身份</div>
+                    <div class="ins-item-sub">独立客观视角</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. 关联世界书 -->
+            <div class="char-input-group">
+              <label class="char-label">关联世界书 / LOREBOOK</label>
+              <div class="ins-dropdown" data-dropdown="bindWorld">
+                <input type="hidden" id="char-bind-world" value="none">
+                <div class="ins-dropdown-trigger" id="char-bind-world-trigger">
+                  <div class="ins-dropdown-cell">
+                    <div class="ins-cell-dot inactive"></div>
+                    <span class="ins-dropdown-value">未关联世界书（默认使用人设档案）</span>
+                  </div>
+                  <svg class="ins-dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                </div>
+                <div class="ins-dropdown-sheet" id="char-bind-world-sheet">
+                  <div class="ins-dropdown-item active" data-val="none">
+                    <div class="ins-item-main">未关联世界书</div>
+                    <div class="ins-item-sub">仅依赖当前角色卡设定的背景</div>
+                  </div>
+                  <div class="ins-dropdown-item" data-val="satellite_main">
+                    <div class="ins-item-main">Asher: Satellite 世界档案</div>
+                    <div class="ins-item-sub">包含伦敦近未来、时间裂隙与记忆向导</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. 关联专属表情包库 -->
+            <div class="char-input-group">
+              <label class="char-label">关联专属表情包库 / STICKERS</label>
+              <div class="ins-dropdown" data-dropdown="bindSticker">
+                <input type="hidden" id="char-bind-sticker" value="none">
+                <div class="ins-dropdown-trigger" id="char-bind-sticker-trigger">
+                  <div class="ins-dropdown-cell">
+                    <div class="ins-cell-dot inactive"></div>
+                    <span class="ins-dropdown-value">未关联专属包（使用全局表情包）</span>
+                  </div>
+                  <svg class="ins-dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                </div>
+                <div class="ins-dropdown-sheet" id="char-bind-sticker-sheet">
+                  <div class="ins-dropdown-item active" data-val="none">
+                    <div class="ins-item-main">全局系统表情包</div>
+                    <div class="ins-item-sub">使用通用极简表情包库</div>
+                  </div>
+                  <div class="ins-dropdown-item" data-val="custom_archer">
+                    <div class="ins-item-main">Archer 专属手绘微表情</div>
+                    <div class="ins-item-sub">冷淡系素描线稿表情集</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- 底部高质感磨砂操作栏 -->
+      <div class="char-editor-actions">
+        <button type="button" class="char-action-pill-btn secondary" id="char-form-cancel-btn">取消返回</button>
+        <button type="button" class="char-action-pill-btn primary" id="char-save-btn">保存角色档案</button>
+      </div>
+    </div>
+
+    <!-- ================= 设置 APP 全屏应用视图 ================= -->
+  <div class="settings-app-container" id="settings-app">
+    <!-- 顶部导航栏 -->
+    <header class="settings-nav-bar">
+      <button class="settings-back-btn" id="settings-back-btn">
+        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        <span>返回</span>
+      </button>
+      <h1 class="settings-nav-title">设置</h1>
+      <div class="nav-placeholder"></div>
+    </header>
+
+    <!-- 设置主滚动流 -->
+    <main class="settings-scroll-content">
+      
+           <!-- 1. 顶部账号卡片 (支持点击更换头像与资料) -->
+      <section class="settings-card settings-profile-card" id="settings-profile-card">
+        <div class="profile-avatar-circle" id="settings-avatar-wrap">
+          <svg viewBox="0 0 80 80" class="profile-default-svg" id="profile-default-svg">
+            <rect width="80" height="80" fill="#faf6f8"/>
+            <path d="M28 30 C22 10, 33 8, 36 30" fill="#ffffff" stroke="#2d2d2d" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M44 30 C47 8, 58 10, 52 30" fill="#ffffff" stroke="#2d2d2d" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="40" cy="46" r="21" fill="#ffffff" stroke="#2d2d2d" stroke-width="1.6"/>
+            <circle cx="33" cy="44" r="2.2" fill="#2d2d2d"/>
+            <circle cx="47" cy="44" r="2.2" fill="#2d2d2d"/>
+            <circle cx="27" cy="49" r="2.5" fill="#f4dbe2"/>
+            <circle cx="53" cy="49" r="2.5" fill="#f4dbe2"/>
+            <path d="M38 50 Q40 52 42 50" stroke="#2d2d2d" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+          </svg>
+          <img
+            src=""
+            alt="avatar"
+            class="profile-custom-img"
+            id="settings-avatar-img"
+            style="display: none"
+          />
+        </div>
+        <div class="profile-info-group">
+          <div class="profile-name-row">
+            <h2 class="profile-main-name" id="settings-name-display">Asher User</h2>
+            <span class="profile-verified-badge">PRO</span>
+          </div>
+          <p class="profile-bio-text" id="settings-bio-display">星河漫游，静听心跳</p>
+        </div>
+        <span class="settings-chevron">›</span>
+      </section>
+
+      <!-- 2. 分组一：核心配置 (CORE CONFIGURATION) -->
+      <div class="settings-group-header">CORE CONFIGURATION</div>
+      <section class="settings-card settings-list-group">
+        
+        <!-- API 设置 -->
+        <div class="settings-cell" data-section="api">
+          <div class="cell-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+          </div>
+          <div class="cell-content">
+            <div class="cell-title">API 设置</div>
+            <div class="cell-subtitle">Base URL, Key &amp; models configuration</div>
+          </div>
+          <span class="settings-chevron">›</span>
+        </div>
+
+        <!-- 语音设置 -->
+        <div class="settings-cell" data-section="voice">
+          <div class="cell-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+          </div>
+          <div class="cell-content">
+            <div class="cell-title">语音设置</div>
+            <div class="cell-subtitle">MiniMax &amp; ElevenLabs profiles &amp; timbres</div>
+          </div>
+          <span class="settings-chevron">›</span>
+        </div>
+
+        <!-- 读取设置 -->
+        <div class="settings-cell" data-section="reading">
+          <div class="cell-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </div>
+          <div class="cell-content">
+            <div class="cell-title">读取设置</div>
+            <div class="cell-subtitle">Context reading, tokens &amp; memory stream</div>
+          </div>
+          <span class="settings-chevron">›</span>
+        </div>
+
+        <!-- AI解答 -->
+        <div class="settings-cell" data-section="qa">
+          <div class="cell-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 11.9 12 12.5 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+          </div>
+          <div class="cell-content">
+            <div class="cell-title">AI 解答</div>
+            <div class="cell-subtitle">Prompt heuristics, logic &amp; debugging</div>
+          </div>
+          <span class="settings-chevron">›</span>
+        </div>
+
+      </section>
+
+      <!-- 3. 分组二：系统效能 (SYSTEM PERFORMANCE & MAINTENANCE) -->
+      <div class="settings-group-header">SYSTEM PERFORMANCE &amp; MAINTENANCE</div>
+      <section class="settings-card settings-list-group">
+        
+        <!-- 后台保活 -->
+        <div class="settings-cell" data-section="keepalive">
+          <div class="cell-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/></svg>
+          </div>
+          <div class="cell-content">
+            <div class="cell-title">后台保活</div>
+            <div class="cell-subtitle">Heartbeat ping, persistent worker &amp; sync</div>
+          </div>
+          <span class="settings-chevron">›</span>
+        </div>
+
+        <!-- 压缩 -->
+        <div class="settings-cell" data-section="compression">
+          <div class="cell-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M4 9h16v2H4zm0 4h10v2H4zm0 4h14v2H4zM4 5h16v2H4z"/></svg>
+          </div>
+          <div class="cell-content">
+            <div class="cell-title">压缩</div>
+            <div class="cell-subtitle">Context compression &amp; memory trimming</div>
+          </div>
+          <span class="settings-chevron">›</span>
+        </div>
+
+        <!-- 数据总结 -->
+        <div class="settings-cell" data-section="summary">
+          <div class="cell-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+          </div>
+          <div class="cell-content">
+            <div class="cell-title">数据总结</div>
+            <div class="cell-subtitle">Tokens analytics, archive summary &amp; logs</div>
+          </div>
+          <span class="settings-chevron">›</span>
+        </div>
+
+      </section>
+
+      <!-- 底部系统版本标识 -->
+      <footer class="settings-footer-brand">
+        <span>Asher System Settings · v1.0.0</span>
+      </footer>
+  </main>
+
+        <!-- ================= API 设置二级独立子页面 ================= -->
+    <div class="settings-subpage-container" id="api-subpage">
+      <header class="settings-nav-bar subpage-nav-bar">
+        <button class="settings-back-btn" id="api-back-btn">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          <span>设置</span>
+        </button>
+        <h2 class="settings-nav-title">API 设置</h2>
+        <div class="nav-placeholder"></div>
+      </header>
+
+      <main class="settings-scroll-content subpage-content">
+        <!-- 核心表单区域：透底通铺，无生硬白色卡片包裹 -->
+        <div class="api-plain-section">
+          <!-- 预设名称 -->
+          <div class="api-form-item">
+            <label class="api-form-label">预设名称 (PRESET NAME)</label>
+            <input type="text" id="api-name-input" class="api-form-input" placeholder="例如：Claude 3.5 Sonnet / 默认接口" value="默认接口" spellcheck="false" autocomplete="off" />
+          </div>
+
+          <!-- 接口地址 URL -->
+          <div class="api-form-item">
+            <label class="api-form-label">接口地址 (BASE URL)</label>
+            <input type="text" id="api-url-input" class="api-form-input" placeholder="https://api.openai.com/v1" spellcheck="false" autocomplete="off" />
+          </div>
+
+          <!-- API 密钥 KEY -->
+          <div class="api-form-item">
+            <label class="api-form-label">接口密钥 (API KEY)</label>
+            <input type="password" id="api-key-input" class="api-form-input" placeholder="sk-..." autocomplete="off" />
+          </div>
+
+          <!-- 模型选择区域 -->
+          <div class="api-form-item">
+            <div class="api-label-row">
+              <label class="api-form-label">当前模型 (MODEL)</label>
+              <button type="button" class="api-btn-pill ghost" id="api-fetch-models-btn">
+                <svg class="pill-icon" viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0020 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 004 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+                <span>拉取模型</span>
+              </button>
+            </div>
+            
+            <!-- 半屏弹窗触发器 -->
+            <div class="api-model-trigger-btn" id="api-model-trigger-btn">
+              <span id="api-model-trigger-text">选择模型...</span>
+              <svg class="trigger-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+
+            <!-- 自定义模型备选输入 -->
+            <input type="text" id="api-model-custom-input" class="api-form-input" style="margin-top: 8px;" placeholder="或直接手动输入自定义模型名" spellcheck="false" autocomplete="off" />
+          </div>
+
+          <!-- 自定义分类标签 (CATEGORY) -->
+          <div class="api-form-item">
+            <label class="api-form-label">分类标签 (CATEGORY)</label>
+            <input type="text" id="api-tag-input" class="api-form-input" placeholder="如：Claude、Gemini、Grok、备用中转..." spellcheck="false" autocomplete="off" />
+            <!-- 快捷分类选择推荐 -->
+            <div class="api-tag-quick-wrap" id="api-tag-quick-wrap">
+              <span class="tag-quick-chip" data-tag="Claude">Claude</span>
+              <span class="tag-quick-chip" data-tag="Gemini">Gemini</span>
+              <span class="tag-quick-chip" data-tag="DeepSeek">DeepSeek</span>
+              <span class="tag-quick-chip" data-tag="OpenAI">OpenAI</span>
+              <span class="tag-quick-chip" data-tag="Grok">Grok</span>
+            </div>
+          </div>
+
+          <!-- 连通性测试按钮与结果反馈 -->
+          <div class="api-test-row">
+            <button type="button" class="api-btn-pill ghost" id="api-test-btn">
+              <svg class="pill-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>连通性测试</span>
+            </button>
+            <span class="api-test-badge" id="api-test-result">未测试</span>
+          </div>
+
+          <!-- 温度偏好滑块 -->
+          <div class="api-form-item api-temp-item">
+            <div class="api-temp-info">
+              <span class="api-form-label">温度偏好 (TEMPERATURE)</span>
+              <span class="api-temp-val" id="api-temp-display">0.7</span>
+            </div>
+            <input type="range" class="ins-range-slider" id="api-temp-slider" min="0.0" max="2.0" step="0.05" value="0.7" />
+            <div class="api-temp-ticks">
+              <span>0.0 严谨准确</span>
+              <span>1.0 平衡</span>
+              <span>2.0 极具创意</span>
+            </div>
+          </div>
+
+          <!-- 保存预设主按钮 -->
+          <div class="api-submit-wrap">
+            <button type="button" class="api-btn-pill primary" id="api-save-btn">保存为独立预设</button>
+          </div>
+        </div>
+
+        <!-- 历史预设列表区域 -->
+        <div class="settings-group-header">已保存的接口预设 (PRESETS)</div>
+        
+        <!-- 预设分类 Tab 过滤栏 -->
+        <div class="preset-filter-bar" id="preset-filter-bar">
+          <button type="button" class="filter-tab active" data-cat="ALL">全部</button>
+          <button type="button" class="filter-tab" data-cat="Claude">Claude</button>
+          <button type="button" class="filter-tab" data-cat="Gemini">Gemini</button>
+          <button type="button" class="filter-tab" data-cat="DeepSeek">DeepSeek</button>
+          <button type="button" class="filter-tab" data-cat="OpenAI">OpenAI</button>
+        </div>
+
+        <div id="api-presets-container" class="preset-cards-list">
+          <!-- 动态加载预设 -->
+        </div>
+      </main>
+    </div> <!-- 结束 api-subpage -->
+
+    <!-- ================= 语音设置二级子页面 (Voice Subpage) ================= -->
+    <div class="settings-subpage-container" id="voice-subpage">
+      <header class="settings-nav-bar subpage-nav-bar">
+        <button class="settings-back-btn" id="voice-back-btn">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          <span>设置</span>
+        </button>
+        <h2 class="settings-nav-title">语音设置</h2>
+        <div class="nav-placeholder"></div>
+      </header>
+
+      <main class="settings-scroll-content subpage-content">
+        <!-- 双引擎切换 -->
+        <div class="voice-engine-switch-wrap">
+          <div class="voice-engine-capsule">
+            <button type="button" class="voice-engine-tab active" data-engine="minimax">MiniMax 语音</button>
+            <button type="button" class="voice-engine-tab" data-engine="elevenlabs">ElevenLabs</button>
+          </div>
+        </div>
+
+        <!-- 1. MiniMax 配置面板 -->
+        <div class="voice-panel active" id="panel-minimax">
+          <div class="settings-group-header">MINIMAX 接口与模型参数</div>
+          <div class="api-plain-section">
+            <div class="api-form-item">
+              <label class="api-form-label">GROUP ID (商户组编号)</label>
+              <input type="text" id="mm-group-id" class="api-form-input" placeholder="例如：1827462819..." spellcheck="false">
+            </div>
+            <div class="api-form-item">
+              <label class="api-form-label">API KEY (接口凭证)</label>
+              <input type="password" id="mm-api-key" class="api-form-input" placeholder="Bearer sk-..." autocomplete="off">
+            </div>
+            <div class="api-form-item">
+              <label class="api-form-label">语音大模型 (MODEL)</label>
+              <input type="text" id="mm-model" class="api-form-input" value="speech-01-turbo" placeholder="speech-01-turbo / speech-02-turbo">
+            </div>
+            <div class="api-form-item">
+              <label class="api-form-label">快捷音色预设 (VOICE ID)</label>
+              <div class="voice-preset-chips" id="mm-preset-chips">
+                <button type="button" class="preset-chip active" data-voice="female-shaonv">青涩少女</button>
+                <button type="button" class="preset-chip" data-voice="female-yujie">清冷御姐</button>
+                <button type="button" class="preset-chip" data-voice="presenter_male">磁性青年</button>
+                <button type="button" class="preset-chip" data-voice="audiobook_female_1">温柔叙事</button>
+              </div>
+              <input type="text" id="mm-custom-voice" class="api-form-input" style="margin-top: 8px;" placeholder="自定义 Voice ID 或填入自建克隆音色 ID">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. ElevenLabs 配置面板 -->
+        <div class="voice-panel" id="panel-elevenlabs">
+          <div class="settings-group-header">ELEVENLABS 接口与模型参数</div>
+          <div class="api-plain-section">
+            <div class="api-form-item">
+              <label class="api-form-label">API KEY (xi-api-key)</label>
+              <input type="password" id="el-api-key" class="api-form-input" placeholder="xi-..." autocomplete="off">
+            </div>
+            <div class="api-form-item">
+              <label class="api-form-label">语音模型 (MODEL)</label>
+              <input type="text" id="el-model" class="api-form-input" value="eleven_multilingual_v2" placeholder="eleven_multilingual_v2">
+            </div>
+            <div class="api-form-item">
+              <label class="api-form-label">音色预设 (VOICE ID)</label>
+              <div class="voice-preset-chips" id="el-preset-chips">
+                <button type="button" class="preset-chip active" data-voice="21m00Tcm4TlvDq8ikWAM">Rachel (柔和)</button>
+                <button type="button" class="preset-chip" data-voice="AZnzlk1XvdvUeBnXmlld">Domi (灵动)</button>
+                <button type="button" class="preset-chip" data-voice="pNInz6obpgDQGcFmaJgB">Adam (沉稳)</button>
+                <button type="button" class="preset-chip" data-voice="ErXwobaYiN019PkySvjV">Antoni (温柔男)</button>
+              </div>
+              <input type="text" id="el-custom-voice" class="api-form-input" style="margin-top: 8px;" value="21m00Tcm4TlvDq8ikWAM" placeholder="自定义或克隆 Voice ID">
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. 实时试听测试与调音台 (DSP Tuner) -->
+        <div class="settings-group-header">ACOUSTIC TUNER &amp; PREVIEW</div>
+        <div class="voice-tuner-card">
+          <div class="tuner-header">
+            <div class="tuner-title-group">
+              <span class="tuner-title">REAL-TIME ACOUSTIC TUNER</span>
+              <span class="tuner-sub">音色实时微调与调音台 (基于 Web Audio DSP)</span>
+            </div>
+            <div class="tuner-status-badge" id="voice-audio-status">STANDBY</div>
+          </div>
+
+          <div class="api-form-item">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label class="api-form-label" style="margin-bottom: 0;">试听文本 (PREVIEW SCRIPT)</label>
+              <button type="button" id="btn-random-phrase" style="background: none; border: none; font-size: 11px; color: #7b787c; cursor: pointer; text-decoration: underline;">换一句</button>
+            </div>
+            <textarea id="voice-preview-text" class="api-form-input" style="height: auto; padding: 10px 14px; min-height: 60px; resize: none;">碎月沉入静海，长耳倾听星云。</textarea>
+          </div>
+
+          <!-- 调音台滑块群 -->
+          <div class="tuner-sliders-grid">
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span class="slider-name">语速 (SPEED)</span>
+                <span class="slider-val" id="val-speed">1.0x</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-speed" min="0.7" max="1.5" step="0.05" value="1.0">
+            </div>
+
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span class="slider-name">音高偏置 (PITCH)</span>
+                <span class="slider-val" id="val-pitch">0 st</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-pitch" min="-6" max="6" step="0.5" value="0">
+            </div>
+
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span class="slider-name">空气感 (AIR BOOST)</span>
+                <span class="slider-val" id="val-air">+2 dB</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-air" min="-6" max="10" step="1" value="2">
+            </div>
+
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span class="slider-name">空间混响 (REVERB)</span>
+                <span class="slider-val" id="val-reverb">15%</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-reverb" min="0" max="80" step="5" value="15">
+            </div>
+          </div>
+
+          <div class="tuner-actions-row">
+            <button type="button" class="btn-tuner-play" id="btn-voice-preview">
+              <svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+              <span id="preview-btn-text">试听渲染声音</span>
+            </button>
+            <button type="button" class="btn-tuner-reset" id="btn-tuner-reset" title="复位调音参数">
+              <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="subpage-footer-actions">
+          <button type="button" class="api-btn-pill primary" id="voice-save-btn" style="width: 100%; height: 44px;">保存并应用当前音色配置</button>
+        </div>
+      </main>
+    </div> <!-- 结束 voice-subpage -->
+  </div> <!-- 结束 settings-app 主容器 -->
+
+  <!-- 半屏抽屉模型选择弹窗 -->
+  <div class="ins-sheet-backdrop" id="model-sheet-backdrop">
+    <div class="ins-sheet-panel" id="model-sheet-panel">
+      <div class="sheet-handle-bar"></div>
+      <div class="sheet-header-row">
+        <span class="sheet-title">选择预设模型</span>
+        <button type="button" class="sheet-close-btn" id="sheet-close-btn">
+          <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+
+      <div class="sheet-search-wrap">
+        <svg class="sheet-search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <input type="text" id="sheet-search-input" class="sheet-search-input" placeholder="搜索模型名称或分类..." spellcheck="false" autocomplete="off" />
+      </div>
+
+      <div class="sheet-category-bar" id="sheet-cat-tabs">
+        <button type="button" class="sheet-cat-pill active" data-cat="ALL">全部</button>
+        <button type="button" class="sheet-cat-pill" data-cat="Claude">Claude</button>
+        <button type="button" class="sheet-cat-pill" data-cat="Gemini">Gemini</button>
+        <button type="button" class="sheet-cat-pill" data-cat="DeepSeek">DeepSeek</button>
+        <button type="button" class="sheet-cat-pill" data-cat="OpenAI">OpenAI</button>
+        <button type="button" class="sheet-cat-pill" data-cat="Grok">Grok</button>
+        <button type="button" class="sheet-cat-pill" data-cat="Others">Others</button>
+      </div>
+
+      <div class="sheet-list-container" id="sheet-model-list"></div>
+
+         <div class="sheet-footer-info">
+        <span id="sheet-model-count">0 个模型可用</span>
+      </div>
+    </div>
+  </div>
+
+     <!-- ================= 美化 APP 全屏主容器 (设置同款卡片列表 + 子页面架构) ================= -->
+    <div class="beauty-app-container" id="beauty-app">
+      <!-- 美化主页面视图 -->
+      <div class="beauty-main-view" id="beauty-main-view">
+        <!-- 顶栏 -->
+        <header class="beauty-nav-bar">
+          <button type="button" class="beauty-nav-back" id="beauty-back-btn" aria-label="返回">
+            <svg viewBox="0 0 24 24" class="nav-arrow-icon"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            <span>返回</span>
+          </button>
+          <div class="beauty-nav-title">
+            <span class="main-title">美化中心</span>
+            <span class="sub-title">BEAUTY STUDIO</span>
+          </div>
+          <div class="beauty-nav-placeholder"></div>
+        </header>
+
+        <!-- 主内容区：设置同款卡片列表 -->
+        <main class="beauty-scroll-content">
+          <!-- 分组 1: 视口与桌面外观 -->
+          <div class="beauty-group-label">DISPLAY & DESKTOP · 外观与视口</div>
+          <div class="beauty-cells-card">
+            <!-- 1. 屏幕调整 -->
+            <div class="beauty-cell" data-beauty-target="screen">
+              <div class="beauty-cell-icon">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4V6zm-2 0a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm8 15h4v2h-4v-2z"/></svg>
+              </div>
+              <div class="beauty-cell-info">
+                <span class="cell-main-title">屏幕调整</span>
+                <span class="cell-sub-title">Viewport scale, radius & padding metrics</span>
+              </div>
+              <div class="beauty-cell-arrow">
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+              </div>
+            </div>
+
+            <!-- 2. 桌面美化 -->
+            <div class="beauty-cell" data-beauty-target="desktop">
+              <div class="beauty-cell-icon">
+                <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              </div>
+              <div class="beauty-cell-info">
+                <span class="cell-main-title">桌面美化</span>
+                <span class="cell-sub-title">Wallpaper canvas, frosted blur & icon size</span>
+              </div>
+              <div class="beauty-cell-arrow">
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- 分组 2: 排版与视觉基底 -->
+          <div class="beauty-group-label">TYPOGRAPHY & PALETTE · 排版与色系</div>
+          <div class="beauty-cells-card">
+            <!-- 3. 字体 -->
+            <div class="beauty-cell" data-beauty-target="font">
+              <div class="beauty-cell-icon">
+                <svg viewBox="0 0 24 24"><path d="M9.93 13.5h4.14L12 7.98zM20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-4.05 16.5l-1.14-3H9.17l-1.12 3H5.96l5.11-13h1.86l5.11 13h-2.09z"/></svg>
+              </div>
+              <div class="beauty-cell-info">
+                <span class="cell-main-title">字体排版</span>
+                <span class="cell-sub-title">Editorial typography, letter spacing & fonts</span>
+              </div>
+              <div class="beauty-cell-arrow">
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+              </div>
+            </div>
+
+            <!-- 4. 主题色调 -->
+            <div class="beauty-cell" data-beauty-target="theme">
+              <div class="beauty-cell-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.28 19.64 10.59 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+              </div>
+              <div class="beauty-cell-info">
+                <span class="cell-main-title">主题色调</span>
+                <span class="cell-sub-title">Cherry mist, silver metal & custom accents</span>
+              </div>
+              <div class="beauty-cell-arrow">
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="beauty-system-footer">
+            <span>Asher Phone · Custom Beauty Studio 2026</span>
+          </div>
+        </main>
+      </div>
+
+           <!-- ================= 子页面 1: 屏幕调整与滤镜调色台 ================= -->
+      <div class="beauty-subpage" id="bsub-screen">
+        <header class="beauty-nav-bar">
+          <button type="button" class="beauty-nav-back bsub-back-btn">
+            <svg viewBox="0 0 24 24" class="nav-arrow-icon"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            <span>美化</span>
+          </button>
+          <div class="beauty-nav-title">
+            <span class="main-title">屏幕调整</span>
+            <span class="sub-title">VIEWPORT & FILTERS</span>
+          </div>
+          <div class="beauty-nav-placeholder"></div>
+        </header>
+
+        <main class="beauty-scroll-content">
+          <!-- 快捷操作胶囊行 -->
+          <div class="screen-quick-bar">
+            <button type="button" class="screen-quick-btn" id="btn-screen-center">
+              <svg viewBox="0 0 24 24"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
+              <span>画面居中</span>
+            </button>
+            <button type="button" class="screen-quick-btn" id="btn-screen-reset">
+              <svg viewBox="0 0 24 24"><path d="M19 12h-2V7h-5V5h7v7zm-5 7H7v-7h2v5h5v2zM5 19v-2h2v2H5zm14-14h-2V3h2v2z"/></svg>
+              <span>一键铺平</span>
+            </button>
+          </div>
+
+          <!-- 分组 1: 屏幕几何布局 -->
+          <div class="beauty-group-label">GEOMETRY LAYOUT · 视口与缩放位移</div>
+          <div class="beauty-card">
+            <!-- 缩放倍率 -->
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span>画面缩放比例 (ZOOM SCALE)</span>
+                <span class="slider-val" id="val-b-scale">1.00x</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-b-scale" min="0.60" max="1.40" step="0.01" value="1.00" />
+            </div>
+
+            <!-- 垂直上下偏移 -->
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span>上下偏移位置 (OFFSET Y)</span>
+                <span class="slider-val" id="val-b-offset-y">0px</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-b-offset-y" min="-150" max="150" step="1" value="0" />
+            </div>
+
+            <!-- 水平左右偏移 -->
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span>左右偏移位置 (OFFSET X)</span>
+                <span class="slider-val" id="val-b-offset-x">0px</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-b-offset-x" min="-120" max="120" step="1" value="0" />
+            </div>
+
+            <!-- 组件圆角 -->
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span>组件圆角曲率 (BORDER RADIUS)</span>
+                <span class="slider-val" id="val-b-radius">24px</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-b-radius" min="12" max="36" value="24" />
+            </div>
+          </div>
+
+          <!-- 分组 2: 画面整体滤镜调色 -->
+          <div class="beauty-group-label">COLOR ATMOSPHERE · 画面整体滤镜与色温</div>
+          <div class="beauty-card">
+            <!-- 快速滤镜预设胶囊 -->
+            <div class="filter-preset-row">
+              <button type="button" class="filter-chip active" data-filter="raw">原色 RAW</button>
+              <button type="button" class="filter-chip" data-filter="cool">冷光 COOL</button>
+              <button type="button" class="filter-chip" data-filter="warm">暖光 WARM</button>
+              <button type="button" class="filter-chip" data-filter="mono">极简 MONO</button>
+            </div>
+
+            <!-- 冷暖光温滑块 -->
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span>色温调光 (冷光 ◄ 0 ► 暖光)</span>
+                <span class="slider-val" id="val-b-temp">0</span>
+              </div>
+              <div class="temp-slider-wrap">
+                <span class="temp-indicator cold">COOL</span>
+                <input type="range" class="ins-range-slider temp-slider" id="slider-b-temp" min="-50" max="50" step="1" value="0" />
+                <span class="temp-indicator warm">WARM</span>
+              </div>
+            </div>
+
+            <!-- 亮度曝光 -->
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span>画面曝光亮度 (BRIGHTNESS)</span>
+                <span class="slider-val" id="val-b-bright">100%</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-b-bright" min="70" max="130" step="1" value="100" />
+            </div>
+
+            <!-- 对比度 -->
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span>光影对比度 (CONTRAST)</span>
+                <span class="slider-val" id="val-b-contrast">100%</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-b-contrast" min="70" max="130" step="1" value="100" />
+            </div>
+
+            <!-- 饱和度 -->
+            <div class="slider-control-item">
+              <div class="slider-info">
+                <span>色彩饱和度 (SATURATION)</span>
+                <span class="slider-val" id="val-b-sat">100%</span>
+              </div>
+              <input type="range" class="ins-range-slider" id="slider-b-sat" min="0" max="150" step="1" value="100" />
+            </div>
+          </div>
+
+          <button type="button" class="beauty-save-pill" id="btn-save-screen">保存屏幕与滤镜参数</button>
+        </main>
+      </div>
+
+         <!-- ================= 2. 桌面美化子页面 ================= -->
+    <div class="beauty-subpage" id="bsub-desktop">
+      <div class="beauty-sub-header">
+        <button class="bsub-back-btn" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          <span>美化</span>
+        </button>
+        <div class="bsub-header-title">
+          <div class="title-main">桌面美化</div>
+          <div class="title-sub">WALLPAPER & ICONS STUDIO</div>
+        </div>
+        <div style="width: 48px;"></div>
+      </div>
+
+      <div class="beauty-subpage-content">
+        <!-- 1. 原生真壁纸纯净画幅实时预览 (无手机壳) -->
+        <div class="beauty-panel-card">
+          <div class="panel-card-head">CANVAS PREVIEW · 壁纸实时画幅</div>
+          <div class="pure-wallpaper-canvas" id="pure-wallpaper-canvas">
+            <div class="canvas-empty-tip" id="canvas-empty-tip">未设置壁纸 (当前为系统底色)</div>
+          </div>
+          <div class="action-btn-row" style="margin-top: 12px;">
+            <button type="button" class="beauty-btn dark" id="btn-upload-wallpaper">更换壁纸</button>
+            <button type="button" class="beauty-btn light" id="btn-save-to-library" style="display:none;">存入壁纸库</button>
+            <button type="button" class="beauty-btn light" id="btn-reset-wallpaper" style="display:none;">恢复默认纯色</button>
+          </div>
+        </div>
+
+        <!-- 2. 壁纸位移与精细微调区域 -->
+        <div class="beauty-panel-card">
+          <div class="panel-card-head">WALLPAPER TWEAKS · 壁纸位移与微调</div>
+          
+          <div class="action-btn-row" style="margin-bottom: 12px;">
+            <button type="button" class="beauty-btn light" id="btn-wp-center">居中壁纸</button>
+            <button type="button" class="beauty-btn light" id="btn-wp-cover">全屏铺满</button>
+          </div>
+
+          <div class="slider-item-box">
+            <div class="slider-head">
+              <span>壁纸缩放大小 (ZOOM SCALE)</span>
+              <span id="val-wp-scale">100%</span>
+            </div>
+            <input type="range" class="beauty-slider" id="slider-wp-scale" min="50" max="200" step="1" value="100">
+          </div>
+
+          <div class="slider-item-box">
+            <div class="slider-head">
+              <span>左右平移位置 (OFFSET X)</span>
+              <span id="val-wp-x">50%</span>
+            </div>
+            <input type="range" class="beauty-slider" id="slider-wp-x" min="0" max="100" step="1" value="50">
+          </div>
+
+          <div class="slider-item-box">
+            <div class="slider-head">
+              <span>上下平移位置 (OFFSET Y)</span>
+              <span id="val-wp-y">50%</span>
+            </div>
+            <input type="range" class="beauty-slider" id="slider-wp-y" min="0" max="100" step="1" value="50">
+          </div>
+
+          <div class="slider-item-box">
+            <div class="slider-head">
+              <span>壁纸高斯模糊 (BLUR)</span>
+              <span id="val-wp-blur">0px</span>
+            </div>
+            <input type="range" class="beauty-slider" id="slider-wp-blur" min="0" max="25" step="1" value="0">
+          </div>
+
+          <div class="slider-item-box">
+            <div class="slider-head">
+              <span>壁纸不透明度 (OPACITY)</span>
+              <span id="val-wp-opacity">100%</span>
+            </div>
+            <input type="range" class="beauty-slider" id="slider-wp-opacity" min="10" max="100" step="1" value="100">
+          </div>
+
+          <div class="slider-item-box">
+            <div class="slider-head">
+              <span>卡片组件毛玻璃强度 (GLASS FROSTED)</span>
+              <span id="val-b-blur">16px</span>
+            </div>
+            <input type="range" class="beauty-slider" id="slider-b-blur" min="0" max="30" step="1" value="16">
+          </div>
+        </div>
+
+        <!-- 3. 收藏壁纸库 -->
+        <div class="beauty-panel-card">
+          <div class="panel-card-head">WALLPAPER GALLERY · 壁纸库</div>
+          <div class="wallpaper-shelf-row" id="wallpaper-shelf-row">
+            <div class="shelf-empty">壁纸库空空如也，上传壁纸后点击“存入壁纸库”即可收藏</div>
+          </div>
+        </div>
+
+        <!-- 4. 图标形状与尺寸调节 -->
+        <div class="beauty-panel-card">
+          <div class="panel-card-head">GLOBAL ICON SHAPE & SIZE · 全局图标样式</div>
+          <div class="shape-btn-grid">
+            <button type="button" class="shape-chip active" data-shape="squircle">经典 Squircle</button>
+            <button type="button" class="shape-chip" data-shape="round">柔润 Round</button>
+            <button type="button" class="shape-chip" data-shape="circle">正圆 Circle</button>
+            <button type="button" class="shape-chip" data-shape="square">方正 Square</button>
+          </div>
+          <div class="slider-item-box" style="margin-top: 14px;">
+            <div class="slider-head">
+              <span>桌面图标尺寸 (ICON SIZE)</span>
+              <span id="val-b-iconsize">48px</span>
+            </div>
+            <input type="range" class="beauty-slider" id="slider-b-iconsize" min="36" max="60" step="2" value="48">
+          </div>
+          <div class="slider-item-box" style="margin-top: 14px;">
+            <div class="slider-head">
+              <span>图标圆角半径 (ICON RADIUS)</span>
+              <span id="val-b-iconradius">22%</span>
+            </div>
+            <input type="range" class="beauty-slider" id="slider-b-iconradius" min="0" max="50" step="1" value="22">
+          </div>
+        </div>
+
+        <!-- 5. 完整 16 个 APP 独立图标自定义列表 -->
+        <div class="beauty-panel-card">
+          <div class="panel-card-head">ALL 16 APPS CUSTOMIZE · 全部16个应用图标定制</div>
+          <div class="app-icon-custom-list" id="app-icon-manage-list">
+            <!-- 由 JS 精准渲染完整的 16 个 APP -->
+          </div>
+          <button type="button" class="beauty-btn light" id="btn-reset-all-icons" style="margin-top: 12px; width: 100%;">恢复所有默认图标</button>
+        </div>
+
+        <!-- 6. 底部平铺保存按键 (平铺布局，非悬浮) -->
+        <button type="button" class="beauty-save-btn" id="btn-save-desktop" style="margin-bottom: 24px;">保存桌面配置</button>
+      </div>
+    
+
+      
+      <!-- ================= iOS Action Sheet 壁纸上传选择器 ================= -->
+      <div class="ins-actionsheet-wrapper" id="wp-actionsheet-wrapper">
+        <div class="ins-actionsheet-scrim" id="wp-actionsheet-scrim"></div>
+        <div class="ins-actionsheet-panel" id="wp-actionsheet-panel">
+          <div class="ins-actionsheet-drag-handle"></div>
+          <div class="ins-actionsheet-group">
+            <div class="ins-actionsheet-header">
+              <div class="ins-as-title">更换壁纸</div>
+              <div class="ins-as-subtitle">SELECT WALLPAPER SOURCE</div>
+            </div>
+            
+            <!-- 1. 系统相册 -->
+            <button type="button" class="ins-actionsheet-btn" id="as-btn-album">
+              <div class="ins-as-btn-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="3" width="18" height="18" rx="4"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+              </div>
+              <div class="ins-as-btn-content">
+                <span class="ins-as-btn-title">照片图库</span>
+                <span class="ins-as-btn-note">相册 / 照片流 / 本地图片</span>
+              </div>
+              <div class="ins-as-btn-chevron">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </div>
+            </button>
+
+            <!-- 2. 文件选择器 -->
+            <button type="button" class="ins-actionsheet-btn" id="as-btn-file">
+              <div class="ins-as-btn-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M13 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V9l-7-7z"/>
+                  <path d="M13 2v7h7"/>
+                </svg>
+              </div>
+              <div class="ins-as-btn-content">
+                <span class="ins-as-btn-title">选取文件</span>
+                <span class="ins-as-btn-note">文件 App / 目录浏览</span>
+              </div>
+              <div class="ins-as-btn-chevron">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </div>
+            </button>
+
+            <!-- 3. 网络链接 -->
+            <button type="button" class="ins-actionsheet-btn" id="as-btn-url">
+              <div class="ins-as-btn-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+              </div>
+              <div class="ins-as-btn-content">
+                <span class="ins-as-btn-title">网络链接</span>
+                <span class="ins-as-btn-note">输入图片 Web URL 直链</span>
+              </div>
+              <div class="ins-as-btn-chevron">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          <!-- 取消按钮独立毛玻璃卡片 -->
+          <button type="button" class="ins-actionsheet-cancel" id="as-btn-cancel">取消</button>
+        </div>
+
+        <!-- 独立自制 INS 网页 URL 输入弹出卡片 -->
+        <div class="ins-url-dialog-card" id="ins-url-dialog-card">
+          <div class="ins-url-dialog-head">
+            <div class="ins-url-dialog-title">输入图片链接</div>
+            <div class="ins-url-dialog-sub">IMAGE URL IMPORT</div>
+          </div>
+          <div class="ins-url-dialog-body">
+            <div class="ins-url-input-wrap">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              <input type="text" id="ins-url-input-field" placeholder="https://example.com/wallpaper.jpg" spellcheck="false" autocomplete="off">
+            </div>
+            <div class="ins-url-dialog-tip">支持常见 jpg, png, webp 等直链图片格式</div>
+          </div>
+          <div class="ins-url-dialog-actions">
+            <button type="button" class="ins-url-action-btn cancel" id="ins-url-cancel-btn">取消</button>
+            <button type="button" class="ins-url-action-btn confirm" id="ins-url-confirm-btn">导入</button>
+          </div>
+        </div>
+
+        <!-- 纯相册选择 (严格只限制图片) -->
+        <input type="file" id="input-wp-album" accept="image/*" style="display: none;">
+        <!-- 纯系统文件选取 (唤起系统文件管理器) -->
+        <input type="file" id="input-wp-files" accept="*/*" style="display: none;">
+      </div>
+    </div>
+    <!-- 桌面美化子页面结束 -->
+    <div class="beauty-subpage" id="bsub-font">
+      <header class="beauty-nav-bar">
+        <button type="button" class="beauty-nav-back bsub-back-btn">
+          <svg viewBox="0 0 24 24" class="nav-arrow-icon"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          <span>美化</span>
+        </button>
+        <div class="beauty-nav-title">
+          <span class="main-title">字体排版</span>
+          <span class="sub-title">EDITORIAL TYPOGRAPHY</span>
+        </div>
+        <div class="beauty-nav-placeholder"></div>
+      </header>
+
+      <main class="beauty-scroll-content">
+        <!-- 字体预览区 -->
+        <div class="font-preview-showcase">
+          <div class="showcase-label">实时预览</div>
+          <div class="showcase-text" id="font-preview-display" contenteditable="true">Asher Phone<br>优雅·克制·纯粹</div>
+        </div>
+
+        <!-- 上传方式选择 -->
+        <div class="font-upload-methods">
+          <button class="method-btn" id="btn-upload-font">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5m0 0L7 8m5-5v12"/>
+            </svg>
+            <span>本地文件</span>
+          </button>
+          <button class="method-btn" id="btn-use-url">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+            </svg>
+            <span>URL 链接</span>
+          </button>
+          <input type="file" id="input-font-file" accept=".ttf,.otf,.woff,.woff2" style="display:none;">
+        </div>
+
+        <!-- URL 输入框（默认隐藏） -->
+        <div class="font-url-panel" id="url-input-panel" style="display:none;">
+          <input type="text" class="font-url-input" id="input-font-url" placeholder="https://fonts.com/font.woff2">
+        </div>
+
+        <!-- 字体名称 -->
+        <div class="font-info-row">
+          <label class="info-label">字体名称</label>
+          <input type="text" class="info-input" id="input-font-name" placeholder="例如：思源黑体 Regular">
+        </div>
+
+        <!-- 自定义分类 -->
+        <div class="font-category-manager">
+          <div class="category-header">
+            <label class="info-label">字体分类</label>
+            <button class="add-category-btn" id="btn-add-category">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              新建
+            </button>
+          </div>
+          <div class="category-tags" id="category-tags-container">
+            <!-- 动态生成分类标签 -->
+          </div>
+        </div>
+
+        <!-- 保存按钮 -->
+        <button class="font-save-btn" id="btn-save-font">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          保存字体
+        </button>
+
+        <!-- 已保存字体库 -->
+        <div class="font-library-section">
+          <div class="library-header">
+            <span class="library-title">字体库</span>
+            <span class="library-count" id="font-count">0</span>
+          </div>
+          <div class="font-preset-grid" id="font-preset-list">
+            <!-- 动态生成 -->
+          </div>
+        </div>
+      </main>
+        </div>
+      </main>
+
+<div class="beauty-subpage" id="bsub-theme">
+      <header class="beauty-nav-bar">
+        <button type="button" class="beauty-nav-back bsub-back-btn">
+          <svg viewBox="0 0 24 24" class="nav-arrow-icon"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          <span>美化</span>
+        </button>
+        <div class="beauty-nav-title">
+          <span class="main-title">主题色调</span>
+          <span class="sub-title">THEME PALETTE</span>
+        </div>
+        <div class="beauty-nav-placeholder"></div>
+      </header>
+
+      <main class="beauty-scroll-content">
+        <!-- 6套预设色系选择器 -->
+        <section class="theme-preset-section">
+          <h3 class="section-label">预设色系 · PRESETS</h3>
+          <div class="theme-grid">
+            
+            <!-- 色系1: 白黑（极简黑白） -->
+            <div class="theme-card" data-theme="mono">
+              <div class="theme-preview">
+                <div class="preview-bg" style="background: #ffffff;"></div>
+                <div class="preview-accent" style="background: #1a1a1a;"></div>
+              </div>
+              <div class="theme-info">
+                <div class="theme-name">极简黑白</div>
+                <div class="theme-name-en">Monochrome</div>
+                <div class="theme-colors">
+                  <span class="color-chip" style="background: #ffffff; border: 1px solid #e0e0e0;"></span>
+                  <span class="color-chip" style="background: #1a1a1a;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 色系2: 白灰（冷雾银灰） -->
+            <div class="theme-card" data-theme="silver">
+              <div class="theme-preview">
+                <div class="preview-bg" style="background: #f5f5f5;"></div>
+                <div class="preview-accent" style="background: #8a8a8a;"></div>
+              </div>
+              <div class="theme-info">
+                <div class="theme-name">冷雾银灰</div>
+                <div class="theme-name-en">Silver Mist</div>
+                <div class="theme-colors">
+                  <span class="color-chip" style="background: #f5f5f5;"></span>
+                  <span class="color-chip" style="background: #8a8a8a;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 色系3: 粉灰（樱雾粉 - 当前默认） -->
+            <div class="theme-card active" data-theme="cherry">
+              <div class="theme-preview">
+                <div class="preview-bg" style="background: #efe4e9;"></div>
+                <div class="preview-accent" style="background: #bdbbbf;"></div>
+              </div>
+              <div class="theme-info">
+                <div class="theme-name">樱雾粉</div>
+                <div class="theme-name-en">Cherry Mist</div>
+                <div class="theme-colors">
+                  <span class="color-chip" style="background: #efe4e9;"></span>
+                  <span class="color-chip" style="background: #bdbbbf;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 色系4: 暖棕蓝 -->
+            <div class="theme-card" data-theme="earth">
+              <div class="theme-preview">
+                <div class="preview-bg" style="background: #e7dcd9;"></div>
+                <div class="preview-accent" style="background: #ccd6e6;"></div>
+              </div>
+              <div class="theme-info">
+                <div class="theme-name">大地暖蓝</div>
+                <div class="theme-name-en">Earth Tone</div>
+                <div class="theme-colors">
+                  <span class="color-chip" style="background: #e7dcd9;"></span>
+                  <span class="color-chip" style="background: #ccd6e6;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 色系5: 珍珠白 -->
+            <div class="theme-card" data-theme="pearl">
+              <div class="theme-preview">
+                <div class="preview-bg" style="background: #f6f6f4;"></div>
+                <div class="preview-accent" style="background: #d4d4d2;"></div>
+              </div>
+              <div class="theme-info">
+                <div class="theme-name">珍珠白</div>
+                <div class="theme-name-en">Pearl White</div>
+                <div class="theme-colors">
+                  <span class="color-chip" style="background: #f6f6f4;"></span>
+                  <span class="color-chip" style="background: #d4d4d2;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 色系6: 薰衣草紫 -->
+            <div class="theme-card" data-theme="lavender">
+              <div class="theme-preview">
+                <div class="preview-bg" style="background: #e6e1ec;"></div>
+                <div class="preview-accent" style="background: #b8b0c5;"></div>
+              </div>
+              <div class="theme-info">
+                <div class="theme-name">薰衣草</div>
+                <div class="theme-name-en">Lavender</div>
+                <div class="theme-colors">
+                  <span class="color-chip" style="background: #e6e1ec;"></span>
+                  <span class="color-chip" style="background: #b8b0c5;"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 当前激活色系预览 -->
+        <section class="theme-active-preview">
+          <h3 class="section-label">当前色系预览 · CURRENT</h3>
+          <div class="active-preview-card">
+            <div class="preview-row">
+              <div class="preview-label">主背景色</div>
+              <div class="preview-swatch" id="current-bg-swatch" style="background: #efe4e9;"></div>
+              <div class="preview-hex" id="current-bg-hex">#efe4e9</div>
+            </div>
+            <div class="preview-row">
+              <div class="preview-label">强调色/按键</div>
+              <div class="preview-swatch" id="current-accent-swatch" style="background: #bdbbbf;"></div>
+              <div class="preview-hex" id="current-accent-hex">#bdbbbf</div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+    
+  </div>
+    </div>
+
+  <!-- 引入系统脚本与应用独立控制器（确保顺序） -->
+  <script src="js/widgets.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
+    <script src="js/characters.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/beauty.js?v=1792830702"></script>
+</body>
+</html>
+

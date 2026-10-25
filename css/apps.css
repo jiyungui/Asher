@@ -1,0 +1,91 @@
+﻿/* ==========================================================================
+   Asher phone - 应用图标与网格排版系统
+   ========================================================================== */
+
+/* 统一应用单元 */
+.app-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.app-item:active {
+  transform: scale(0.9);
+}
+
+/* 统一图标外框：48px × 48px 微磨砂晶莹质感 */
+.app-icon {
+  width: var(--app-icon-size, 48px);
+  height: var(--app-icon-size, 48px);
+  border-radius: var(--app-icon-radius, 14px);
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(189, 187, 191, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* 统一 APP 矢量 SVG 规格 */
+.app-svg {
+  width: 20px;
+  height: 20px;
+  fill: #2d2d2d;
+  transition: transform 0.2s ease;
+}
+
+.app-item:active .app-svg {
+  transform: scale(0.95);
+}
+
+/* APP 标签文字 */
+.app-name {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  color: var(--accent-dark);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 第二页左侧 2×2 APP 专属容器：与右侧 P5 绝对等高 160px 垂直居中咬合 */
+.page2-quad-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px var(--grid-gap-x);
+  height: 160px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* 渐变微质感低饱和粉灰黑白背景 */
+.icon-chat         { background: linear-gradient(135deg, #ffffff, #eae4e7); }
+.icon-beauty       { background: linear-gradient(135deg, #f7f1f4, #ded5d9); }
+.icon-diary        { background: linear-gradient(135deg, #ffffff, #dedede); }
+.icon-lover        { background: linear-gradient(135deg, #f9f3f6, #dec8d3); }
+.icon-music        { background: linear-gradient(135deg, #ece9ec, #c8c5c9); }
+.icon-check        { background: linear-gradient(135deg, #ffffff, #dcdbdc); }
+.icon-social       { background: linear-gradient(135deg, #f3edf1, #d5cbd2); }
+.icon-secret       { background: linear-gradient(135deg, #e4e0e3, #bdbabf); }
+
+.icon-worldbook    { background: linear-gradient(135deg, #ffffff, #dedadc); }
+.icon-bigworld     { background: linear-gradient(135deg, #f6edf1, #cfc7cc); }
+.icon-xianyu       { background: linear-gradient(135deg, #ffffff, #e5e0e3); }
+.icon-lofter       { background: linear-gradient(135deg, #eae4e7, #c1bdc1); }
+
+/* Dock 栏专属图标质感 */
+.icon-guide        { background: linear-gradient(135deg, #ffffff, #f2e6ed); }
+.icon-sms          { background: linear-gradient(135deg, #f5f0f3, #ded8dc); }
+.icon-settings     { background: linear-gradient(135deg, #eae7ea, #bdbbbf); }
+.icon-newspaper    { background: linear-gradient(135deg, #ffffff, #dad6d9); }

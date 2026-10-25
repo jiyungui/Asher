@@ -1,0 +1,57 @@
+﻿    <!-- ================= 3. 字体排版子页面 ================= -->
+    <div class="beauty-subpage" id="bsub-font">
+      <div class="beauty-subheader">
+        <button class="beauty-subback" data-back="font">← 字体排版</button>
+      </div>
+
+      <div class="beauty-subcontent">
+        <!-- 字体预览区 -->
+        <div class="font-preview-card">
+          <div class="font-preview-label">字体预览</div>
+          <div class="font-preview-text" id="font-preview-display">Asher Phone<br>优雅·克制·纯粹</div>
+        </div>
+
+        <!-- 上传字体文件 -->
+        <div class="font-upload-section">
+          <button class="font-upload-btn" id="btn-upload-font">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 9l5-5m0 0l5 5m-5-5v12"/>
+            </svg>
+            上传字体文件
+          </button>
+          <input type="file" id="input-font-file" accept=".ttf,.otf,.woff,.woff2" style="display:none;">
+          <div class="font-upload-note">支持 TTF / OTF / WOFF / WOFF2</div>
+        </div>
+
+        <!-- URL 上传 -->
+        <div class="font-url-section">
+          <label class="font-label">字体 URL</label>
+          <input type="text" class="font-input" id="input-font-url" placeholder="https://example.com/font.woff2">
+        </div>
+
+        <!-- 字体名称 -->
+        <div class="font-name-section">
+          <label class="font-label">字体名称</label>
+          <input type="text" class="font-input" id="input-font-name" placeholder="例如：思源黑体">
+        </div>
+
+        <!-- 字体分类 -->
+        <div class="font-category-section">
+          <label class="font-label">字体分类</label>
+          <div class="font-category-pills">
+            <button class="font-pill active" data-category="sans-serif">无衬线</button>
+            <button class="font-pill" data-category="serif">衬线</button>
+            <button class="font-pill" data-category="handwriting">手写</button>
+            <button class="font-pill" data-category="monospace">等宽</button>
+          </div>
+        </div>
+
+        <!-- 保存按钮 -->
+        <button class="font-save-btn" id="btn-save-font">保存字体</button>
+
+        <!-- 预设列表 -->
+        <div class="font-preset-list" id="font-preset-list">
+          <!-- 动态生成 -->
+        </div>
+      </div>
+    </div>

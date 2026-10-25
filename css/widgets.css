@@ -1,0 +1,924 @@
+/* ==========================================================================
+   Asher phone - 精致小组件排版 (解除死高截断、极简简笔画兔子、高级INS风)
+   ========================================================================== */
+
+/* 通用小组件基底：超微透白卡片、细腻圆角 */
+.widget {
+  background: var(--surface-trans);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 4px 16px rgba(189, 187, 191, 0.22);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 正方形小组件：高度自然贴合 2 行 APP，不截断 */
+.widget-square {
+  height: 160px;
+  padding: 10px 11px;
+}
+
+/* ================= P1: Night · Jasmine 日历大组件 (完整呼吸展示，绝不截断) ================= */
+.widget-p1-jasmine {
+  min-height: 168px;
+  padding: 11px 14px 10px 14px;
+}
+
+.p1-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.p1-day-num {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 0.9;
+  color: var(--accent-dark);
+}
+
+.p1-date-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.p1-date-sub {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.p1-date-year {
+  font-size: 7.5px;
+  letter-spacing: 1.2px;
+  color: var(--accent-muted);
+}
+
+.p1-divider {
+  width: 100%;
+  height: 0.8px;
+  background-color: var(--border-line);
+  margin: 5px 0 6px 0;
+}
+
+.p1-title-group .p1-title {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.p1-title-group .p1-subtitle {
+  font-size: 9.5px;
+  color: #777;
+  letter-spacing: 0.2px;
+  margin-top: 1px;
+}
+
+.p1-profile-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.p1-side-tag {
+  font-size: 8.5px;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5px;
+}
+
+.p1-side-tag.left-tag { text-align: left; }
+.p1-side-tag.right-tag { text-align: right; }
+
+.p1-avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.p1-avatar-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+.vector-rabbit-avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.p1-avatar-bubble {
+  position: absolute;
+  top: -3px;
+  right: -10px;
+  background: #ffffff;
+  font-size: 7px;
+  padding: 1px 5px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  border: 0.6px solid #eaeaea;
+  color: #555;
+}
+
+.p1-avatar-name {
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.p1-quote-bar {
+  background: rgba(238, 234, 236, 0.78);
+  border-radius: 10px;
+  padding: 4px 9px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 8.5px;
+  color: #4a4a4a;
+}
+
+.p1-quote-bullet { font-size: 9px; color: #222; }
+
+/* ================= P2: Memory 记忆小组件 (耳机兔子精致卡片) ================= */
+.p2-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p2-title {
+  font-family: var(--font-serif);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.p2-icon-btn {
+  font-size: 11px;
+  cursor: pointer;
+  color: #666;
+}
+
+.p2-top-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.p2-cards-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 40px;
+  margin: 1px 0;
+}
+
+.p2-main-card {
+  width: 42px;
+  height: 42px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bunny-headphone-svg {
+  width: 36px;
+  height: 36px;
+}
+
+.p2-ghost-card {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  border: 1px dashed var(--border-strong);
+}
+
+.left-card { left: 10px; transform: scale(0.9); }
+.right-card { right: 10px; transform: scale(0.9); }
+
+.p2-memories-sub {
+  text-align: center;
+  font-size: 8px;
+  color: #888;
+}
+
+.p2-kaomoji {
+  font-size: 8.5px;
+  color: #333;
+}
+
+.p2-dots-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2.5px;
+  margin: 1px 0;
+}
+
+.p2-dots-bar .dot { width: 3px; height: 3px; background: #ccc; border-radius: 50%; }
+.p2-dots-bar .dot-dash { width: 8px; height: 3px; background: var(--accent-dark); border-radius: 2px; }
+
+.p2-stats-grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: rgba(240, 237, 239, 0.65);
+  border-radius: 8px;
+  padding: 3px 0;
+}
+
+.p2-stat-col strong { display: block; font-size: 10px; font-weight: 700; line-height: 1.1; }
+.p2-stat-col small { font-size: 6.5px; color: #777; }
+
+.p2-tags-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 7px;
+  color: #666;
+  padding: 0 1px;
+}
+
+/* ================= P3: Coffee 日常 Plog 小组件 ================= */
+.p3-search-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.p3-arrow-down { font-size: 9px; font-weight: 700; }
+
+.p3-search-inner {
+  flex: 1;
+  background: rgba(238, 234, 236, 0.85);
+  border-radius: 10px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  gap: 3px;
+  font-size: 8.5px;
+  color: #777;
+}
+
+.p3-search-icon { width: 10px; height: 10px; fill: #777; }
+
+.p3-content-split {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  height: calc(100% - 26px);
+}
+
+.p3-coffee-photo {
+  width: 46px;
+  height: 60px;
+  background: linear-gradient(145deg, #ded6da, #f4eef2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p3-coffee-svg { width: 36px; height: 50px; }
+
+.p3-text-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 8px;
+}
+
+.p3-emblem-line { display: flex; gap: 3px; font-size: 8.5px; }
+.p3-sub-italic { font-family: var(--font-serif); font-style: italic; font-size: 9px; }
+.p3-play-line { font-size: 7px; color: #777; }
+.p3-foot-caption { font-size: 7px; color: #666; }
+
+/* ================= P4: Meeting You 报纸大组件 (彻底解决截断 + 极简纯线条兔子) ================= */
+.widget-p4-meeting {
+  min-height: 172px; /* 充足高度，彻底解决截断 */
+  padding: 10px 13px 10px 13px;
+}
+
+.p4-masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.p4-big-m { font-family: var(--font-serif); font-size: 16px; font-weight: 700; }
+.p4-rest-title { font-family: var(--font-serif); font-size: 11px; letter-spacing: 1px; font-weight: 600; }
+.p4-right-mast { font-size: 8px; font-weight: 700; letter-spacing: 1px; color: var(--accent-muted); }
+
+.p4-line { width: 100%; height: 0.8px; background: #2d2d2d; margin: 4px 0 6px 0; }
+
+.p4-body-row {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+/* 优雅白底线条插画相框 */
+.p4-cover-photo {
+  width: 62px;
+  height: 62px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border-line);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.p4-manga-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.p4-info-col { flex: 1; }
+
+.p4-archer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.p4-star-tag { font-size: 7.5px; color: #888; }
+.p4-archer-title { font-size: 14.5px; font-weight: 700; letter-spacing: 0.3px; line-height: 1.1; }
+.p4-stars-cluster { font-size: 7.5px; color: #666; letter-spacing: 1.5px; }
+
+.p4-mic-quote-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  margin-top: 3px;
+}
+
+.p4-quote-english {
+  font-size: 6.8px;
+  line-height: 1.25;
+  color: #4a4a4a;
+  max-width: 155px;
+}
+
+.p4-mic-circle {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 0.8px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.p4-mic-circle svg { width: 9px; height: 9px; fill: #2d2d2d; }
+
+.p4-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  padding-top: 5px;
+  border-top: 0.8px solid var(--border-line);
+}
+
+.p4-temp-col { display: flex; gap: 5px; align-items: center; }
+.weather-cloud { width: 12px; height: 12px; fill: #333; }
+.p4-degree { font-size: 11px; font-weight: 700; }
+.p4-temp-limits {
+  display: flex;
+  flex-direction: column;
+  font-size: 6.5px;
+  color: #777;
+  border-left: 0.8px solid #ccc;
+  padding-left: 5px;
+}
+
+.p4-about-badge {
+  display: flex;
+  align-items: center;
+  border: 0.8px solid #444;
+  border-radius: 6px;
+  padding: 2px 5px;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.about-inner { display: flex; align-items: center; gap: 3px; }
+.about-texts { display: flex; flex-direction: column; font-size: 6.5px; line-height: 1; }
+.about-sub { font-size: 5.5px; max-width: 75px; color: #666; line-height: 1.1; }
+.about-year {
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  font-weight: 700;
+  border-left: 0.8px solid #555;
+  padding-left: 4px;
+}
+
+.p4-bottom-tag {
+  margin-top: 4px;
+  font-size: 7.5px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ================= P5: 双子耳机同频音乐小组件 ================= */
+.widget-p5-duo-music {
+  height: 160px;
+  padding: 8px 9px;
+  background: linear-gradient(180deg, #fdfbfa 0%, #f0e6eb 100%);
+}
+
+.p5-stars-bg {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  font-size: 7.5px;
+  color: #bbb;
+  letter-spacing: 2px;
+}
+
+.p5-heads-bridge {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 2px;
+  z-index: 2;
+}
+
+.p5-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p5-bubble {
+  background: #ffffff;
+  font-size: 6.5px;
+  padding: 1px 4px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  margin-bottom: 2px;
+  color: #555;
+}
+
+.p5-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #2d2d2d;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.p5-avatar svg { width: 100%; height: 100%; }
+
+.p5-wire-svg {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.p5-lyrics-scroll {
+  font-size: 7px;
+  color: #666;
+  text-align: center;
+  margin: 6px 0 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.p5-player-capsule {
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 10px;
+  padding: 4px 6px;
+  border: 0.6px solid rgba(255,255,255,0.9);
+}
+
+.p5-song-title { font-size: 8px; font-weight: 700; text-align: center; }
+.p5-artist-tag { font-size: 6.5px; color: #777; text-align: center; }
+
+.p5-progress-box { margin: 2px 0; }
+.p5-progress-bar { width: 100%; height: 2px; background: #d0ccd0; border-radius: 2px; overflow: hidden; }
+.p5-progress-fill { width: 44%; height: 100%; background: #2d2d2d; }
+
+.p5-time-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 6px;
+  color: #888;
+  margin-top: 1px;
+}
+
+.p5-controls-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.p5-btn {
+  background: none;
+  border: none;
+  font-size: 7.5px;
+  color: #2d2d2d;
+  cursor: pointer;
+}
+
+.p5-btn.play-pause-btn { font-size: 8.5px; font-weight: bold; }
+
+/* ================= P6: 第二页底部长胶囊搜索栏 (彻底解决垂直与水平居中) ================= */
+.widget.widget-p6-search-bar {
+  height: 40px;
+  min-height: 40px;
+  border-radius: 20px;
+  padding: 0 16px;
+  /* 强制覆盖 .widget 通用的 flex-direction: column 与 justify-content: space-between */
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box;
+}
+
+.p6-bar-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+/* 搜索 SVG 图标居中对齐 */
+.p6-search-svg {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  fill: var(--accent-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* 搜索文字框：彻底清除自带 margin/padding，强制行高与垂直居中 */
+.p6-input {
+  flex: 1;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 11px;
+  line-height: 40px; /* 与小组件高度 40px 形成绝对几何居中 */
+  color: var(--accent-dark);
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.p6-input::placeholder {
+  color: var(--accent-muted);
+  line-height: 40px;
+}
+
+/* 右侧年份胶囊徽标居中 */
+.p6-kbd-shortcut {
+  font-size: 8.5px;
+  letter-spacing: 0.5px;
+  padding: 3px 7px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  color: #666;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   小组件编辑悬浮窗 (参考截图：大圆角、胶囊输入框、黑色药丸按钮、毛玻璃)
+   ========================================================================== */
+
+/* 点击小组件时的触控指针微动效 */
+.widget {
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.2, 0.9, 0.4, 1), box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.widget:active {
+  transform: scale(0.985);
+}
+
+/* 全屏遮罩层 */
+.widget-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 22, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+.widget-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 核心悬浮卡片 (参考截图高质感白底卡片) */
+.widget-edit-card {
+  width: 100%;
+  max-width: 320px;
+  background: #ffffff;
+  border-radius: 36px;
+  padding: 24px 22px 26px 22px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.15);
+}
+
+.widget-modal-overlay.active .widget-edit-card {
+  transform: translateY(0) scale(1);
+}
+
+/* 顶部标题区 */
+.modal-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.modal-title {
+  font-family: var(--font-serif, -apple-system, sans-serif);
+  font-size: 17px;
+  font-weight: 600;
+  color: #111111;
+  letter-spacing: 0.5px;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal-close-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #888888;
+  transition: fill 0.2s ease;
+}
+
+.modal-close-btn:active svg {
+  fill: #111111;
+}
+
+/* 居中圆形图片选择区 (智能显隐) */
+.modal-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.modal-avatar-preview {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #f4ecf0;
+  border: 2px solid #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-preview-placeholder svg {
+  width: 32px;
+  height: 32px;
+  fill: #bdbbbf;
+}
+
+.modal-avatar-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 2px 0 3px 0;
+  text-transform: uppercase;
+}
+
+.modal-upload-tip {
+  font-size: 10.5px;
+  color: #8e8d91;
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* 输入框区域：参考截图中的高圆润浅灰胶囊 */
+.modal-inputs-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.modal-input-pill {
+  width: 100%;
+  height: 48px;
+  background: #f4f4f4;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  border-radius: 24px;
+  padding: 0 18px;
+  font-size: 13.5px;
+  color: #1a1a1a;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.modal-input-pill::placeholder {
+  color: #bdbbbf;
+  font-weight: 400;
+}
+
+.modal-input-pill:focus {
+  background: #ffffff;
+  border-color: #bdbbbf;
+  box-shadow: 0 0 0 3px rgba(239, 228, 233, 0.6);
+}
+
+/* 底部药丸箭头按钮 (定制为主题金属银灰 #bdbbbf 高质感风格) */
+.modal-submit-pill {
+  width: 100%;
+  height: 48px;
+  background-color: #bdbbbf;
+  border-radius: 24px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(189, 187, 191, 0.45);
+  transition: transform 0.18s ease, background-color 0.2s ease, box-shadow 0.18s ease;
+}
+
+.modal-submit-pill:active {
+  transform: scale(0.975);
+  background-color: #b0aeb2;
+  box-shadow: 0 3px 10px rgba(189, 187, 191, 0.35);
+}
+
+.modal-submit-pill .arrow-icon {
+  width: 22px;
+  height: 22px;
+  fill: #ffffff;
+  transition: transform 0.18s ease;
+}
+
+.modal-submit-pill:active .arrow-icon {
+  transform: translateX(2px);
+}
+
+/* 底部轻量 Toast */
+.ins-toast {
+  position: fixed;
+  bottom: 96px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(20, 20, 22, 0.88);
+  color: #ffffff;
+  padding: 9px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.26s cubic-bezier(0.18, 0.89, 0.32, 1.2);
+  z-index: 10000;
+}
+
+.ins-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* 双头像展示容器 */
+.modal-duo-avatar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.duo-avatar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 双头像的圆形规格更精致小巧 (66px) */
+.modal-avatar-preview.duo-preview {
+  width: 66px;
+  height: 66px;
+}
+
+.duo-avatar-divider {
+  font-size: 11px;
+  color: #bdbbbf;
+  margin-top: -16px;
+}
+
+.duo-avatar-label {
+  font-size: 10px;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+
+/* 让 P5 小组件内替换上的图片与圆形边框完美贴合 */
+.p5-avatar img.custom-widget-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}

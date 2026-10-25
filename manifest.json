@@ -1,0 +1,9 @@
+{
+  "name": "Asher phone",
+  "short_name": "Asher",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#efe4e9",
+  "theme_color": "#efe4e9",
+  "orientation": "portrait"
+}

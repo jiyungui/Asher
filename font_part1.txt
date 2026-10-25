@@ -1,0 +1,42 @@
+﻿
+// ================= 字体排版管理系统 =================
+
+// 初始化 IndexedDB
+const initFontDB = async () => {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open('AsherFontDB', 1);
+    request.onerror = () => reject(request.error);
+    request.onsuccess = () => resolve(request.result);
+    request.onupgradeneeded = (e) => {
+      const db = e.target.result;
+      if (!db.objectStoreNames.contains('fonts')) {
+        db.createObjectStore('fonts', { keyPath: 'id', autoIncrement: true });
+      }
+    };
+  });
+};
+
+let fontDB = null;
+initFontDB().then(db => { fontDB = db; loadFontPresets(); });
+
+// DOM 元素
+const btnUploadFont = document.getElementById('btn-upload-font');
+const inputFontFile = document.getElementById('input-font-file');
+const inputFontUrl = document.getElementById('input-font-url');
+const inputFontName = document.getElementById('input-font-name');
+const btnSaveFont = document.getElementById('btn-save-font');
+const fontPreviewDisplay = document.getElementById('font-preview-display');
+const fontPresetList = document.getElementById('font-preset-list');
+
+let currentFontData = null;
+let selectedCategory = 'sans-serif';
+
+// 分类选择
+document.querySelectorAll('.font-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.font-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    selectedCategory = pill.dataset.category;
+  });
+});
+

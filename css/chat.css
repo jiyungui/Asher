@@ -1,0 +1,816 @@
+/**
+ * Asher Phone - Chat APP 精细化重构 CSS
+ * 1. 侧边栏纯白紧凑圆角浮岛设计（高度贴合内容，不拖拽冗长空白）
+ * 2. 兔子SVG头像 + 7大功能栏（Chat、角色库、身份库、动态、表情包库、钱包、游戏）
+ * 3. 彻底移除丑陋的默认分组（全部/最近/收藏）
+ * 4. 优化小组件比例与字距留白，杜绝粗笨违和感
+ */
+
+/* ==================== Chat APP 全屏容器 ==================== */
+.chat-app-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg-primary, #efe4e9);
+  z-index: 500;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+.chat-app-container.active {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 磨砂毛玻璃遮罩层 */
+.chat-sidebar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 24, 28, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+  z-index: 800;
+}
+
+.chat-sidebar-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==================== 左侧展开式侧边栏（纯白微磨砂圆角浮岛） ==================== */
+.chat-sidebar {
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 12px;
+  width: 220px;
+  max-width: 72%;
+  z-index: 850;
+  transform: translateX(-120%);
+  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.chat-sidebar.open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* 侧边栏内层纯白独立浮雕圆角卡片 */
+.chat-sidebar-inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 14px 20px 14px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chat-sidebar-inner::-webkit-scrollbar {
+  display: none;
+}
+
+/* 侧边栏顶部兔兔头像框 */
+.chat-sidebar-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.chat-sidebar-avatar-wrap {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 2px solid #ffffff;
+  margin-bottom: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-sidebar-avatar-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.chat-sidebar-name-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.chat-sidebar-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #1d1b1f;
+}
+
+.chat-sidebar-arrow {
+  width: 12px;
+  height: 12px;
+  fill: #737077;
+}
+
+/* 7大功能栏菜单列表 */
+.chat-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.chat-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  color: #3b383f;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  background: transparent;
+}
+
+.chat-menu-item:hover {
+  background: rgba(0, 0, 0, 0.035);
+}
+
+.chat-menu-item:active {
+  transform: scale(0.97);
+}
+
+/* 激活项 (微浅灰浮雕胶囊) */
+.chat-menu-item.active {
+  background: #ede9ee;
+}
+
+.chat-menu-item.active .chat-menu-text {
+  font-weight: 700;
+  color: #121114;
+}
+
+.chat-menu-item.active .chat-menu-icon {
+  color: #121114;
+}
+
+.chat-menu-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #6a676e;
+}
+
+.chat-menu-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.chat-menu-text {
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #312e34;
+}
+
+/* ==================== 主内容区 ==================== */
+.chat-main-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+/* 顶栏 */
+.chat-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(env(safe-area-inset-top, 10px) + 8px) 18px 8px 18px;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.chat-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #2b282e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.chat-nav-btn:active {
+  transform: scale(0.92);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.chat-nav-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.chat-top-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-top-title {
+  margin: 0;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #1c1a1e;
+  line-height: 1.2;
+}
+
+.chat-top-sub {
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #8c898f;
+  margin-top: 1px;
+}
+
+/* 主滚动区域 */
+.chat-scroll-body {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 18px 30px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+.chat-scroll-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* 搜索栏 */
+.chat-search-bar {
+  width: 100%;
+}
+
+.chat-search-box {
+  width: 100%;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.chat-search-svg {
+  width: 15px;
+  height: 15px;
+  color: #a3a0a6;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.chat-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.84rem;
+  color: #2c292f;
+  letter-spacing: 0.01em;
+}
+
+.chat-search-input::placeholder {
+  color: #b3b0b7;
+}
+
+/* ==================== 顶部高画质P1小组件 ==================== */
+.chat-widget-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 语录卡片 */
+.chat-quote-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px 14px 12px 12px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* 左侧东京列车看板 */
+.chat-quote-cover {
+  width: 118px;
+  height: 82px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #32353a 0%, #1a1b1e 100%);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.train-sign-inner {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #e5e5e7;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif;
+}
+
+.train-top-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.train-sub-jp {
+  font-size: 0.46rem;
+  color: #9e9ea2;
+}
+
+.train-main-dest {
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+}
+
+.train-track {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #d1cfd4;
+}
+
+.train-mid-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  line-height: 1;
+}
+
+.train-en-sub {
+  font-size: 0.44rem;
+  color: #8f8e94;
+}
+
+.train-en-dest {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #eae9ed;
+  letter-spacing: 0.04em;
+}
+
+.train-car {
+  font-size: 0.44rem;
+  color: #8f8e94;
+}
+
+.train-bot-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 1px;
+}
+
+.train-kr {
+  font-size: 0.42rem;
+  color: #7b7a80;
+}
+
+.train-time-badge {
+  font-size: 0.5rem;
+  font-weight: 700;
+  font-family: "SF Mono", Menlo, monospace;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1px 4px;
+  border-radius: 4px;
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  letter-spacing: 0.04em;
+}
+
+/* 右侧文案 */
+.chat-quote-right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat-quote-main-jp {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #1a181c;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.chat-quote-trans-tag {
+  font-size: 0.62rem;
+  color: #3b6cb0;
+  font-weight: 600;
+  margin: 1px 0 2px 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.chat-quote-cn-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 2px;
+}
+
+.quote-cn-bar {
+  width: 2px;
+  height: 11px;
+  background: #37353a;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.chat-quote-cn-text {
+  margin: 0;
+  font-size: 0.66rem;
+  color: #454249;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* 操作条 */
+.chat-quote-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quote-action-icons {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.quote-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  color: #939097;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.quote-btn:hover {
+  color: #2b282e;
+}
+
+.quote-btn:active {
+  transform: scale(0.9);
+}
+
+.quote-btn svg {
+  width: 13.5px;
+  height: 13.5px;
+}
+
+/* 拟态心 */
+.chat-quote-heart-badge {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chat-quote-heart-badge:hover {
+  transform: scale(1.08);
+}
+
+.chat-quote-heart-badge:active {
+  transform: scale(0.92);
+}
+
+.heart-glass-svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* 时间轴与天气 */
+.chat-calendar-bar {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+.calendar-timeline-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cal-month-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #1a181c;
+  margin-bottom: 2px;
+}
+
+.cal-timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  padding-left: 2px;
+}
+
+.cal-line {
+  position: absolute;
+  left: 26px;
+  top: 9px;
+  bottom: 9px;
+  width: 1.5px;
+  background: #dedbe0;
+  z-index: 1;
+}
+
+.cal-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  font-size: 0.72rem;
+  color: #9d9aa0;
+  user-select: none;
+}
+
+.cal-day-num {
+  width: 21px;
+  font-weight: 600;
+  font-size: 0.74rem;
+  color: inherit;
+}
+
+.cal-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c8c5cb;
+  margin: 0 7px 0 2px;
+  flex-shrink: 0;
+}
+
+.cal-label {
+  font-weight: 600;
+  margin-right: 6px;
+  color: inherit;
+}
+
+.cal-sub-day {
+  margin-right: 6px;
+  color: inherit;
+}
+
+.cal-lunar {
+  color: inherit;
+}
+
+.cal-past {
+  color: #b5b2b8;
+}
+
+/* 今天高亮胶囊 */
+.cal-item.cal-current {
+  color: #1a181c;
+}
+
+.cal-item.cal-current .cal-day-num {
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: #121013;
+}
+
+.cal-item.cal-current .cal-dot {
+  width: 7px;
+  height: 7px;
+  background: #6a676f;
+  margin: 0 7px 0 1px;
+}
+
+.cal-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(228, 225, 230, 0.75);
+  border-radius: 7px;
+  padding: 2.5px 10px 2.5px 7px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #17151a;
+}
+
+.cal-pill .cal-label {
+  margin-right: 6px;
+  font-weight: 800;
+}
+
+.cal-pill .cal-sub-day {
+  margin-right: 6px;
+  font-weight: 600;
+  color: #4b484f;
+}
+
+.cal-pill .cal-lunar {
+  font-weight: 500;
+  color: #5d5a62;
+}
+
+.cal-future {
+  color: #b5b2b8;
+}
+
+/* 天气 */
+.calendar-weather-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  padding-top: 2px;
+}
+
+.weather-lunar-top {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #928f95;
+  letter-spacing: 0.04em;
+}
+
+.weather-info-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555258;
+}
+
+.weather-sun-cloud {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.weather-text {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #4e4b52;
+  letter-spacing: 0.01em;
+}
+
+/* ==================== 新建角色对话极简卡片按钮 ==================== */
+.chat-new-btn-section {
+  width: 100%;
+}
+
+.chat-new-conversation-card {
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1.5px dashed rgba(162, 158, 166, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #615d65;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.chat-new-conversation-card:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: #7b7780;
+  color: #1a181c;
+}
+
+.chat-new-conversation-card:active {
+  transform: scale(0.98);
+}
+
+.chat-new-plus {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ==================== 对话列表（无多余分组栏，纯净清爽） ==================== */
+.chat-list-container {
+  width: 100%;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-empty-state {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.chat-empty-icon {
+  width: 38px;
+  height: 38px;
+  color: #b7b4ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-empty-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.chat-empty-text {
+  font-size: 0.8rem;
+  color: #9f9ca3;
+  letter-spacing: 0.04em;
+}

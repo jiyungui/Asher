@@ -1,0 +1,50 @@
+﻿
+// 上传字体文件
+if (btnUploadFont && inputFontFile) {
+  btnUploadFont.addEventListener('click', () => inputFontFile.click());
+  
+  inputFontFile.addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      currentFontData = {
+        source: 'file',
+        data: event.target.result,
+        fileName: file.name
+      };
+      if (!inputFontName.value) {
+        inputFontName.value = file.name.replace(/\.[^.]+$/, '');
+      }
+      previewFont(event.target.result);
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+// URL 输入
+if (inputFontUrl) {
+  inputFontUrl.addEventListener('blur', () => {
+    const url = inputFontUrl.value.trim();
+    if (url) {
+      currentFontData = { source: 'url', url: url };
+      previewFont(url);
+    }
+  });
+}
+
+// 预览字体
+const previewFont = (fontSrc) => {
+  const fontFamily = 'PreviewFont_' + Date.now();
+  const fontFace = new FontFace(fontFamily, url(${fontSrc}));
+  
+  fontFace.load().then((loadedFont) => {
+    document.fonts.add(loadedFont);
+    if (fontPreviewDisplay) fontPreviewDisplay.style.fontFamily = fontFamily;
+  }).catch(err => {
+    console.error('字体加载失败:', err);
+    alert('字体加载失败');
+  });
+};
+

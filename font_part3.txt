@@ -1,0 +1,94 @@
+﻿
+// 保存字体
+if (btnSaveFont) {
+  btnSaveFont.addEventListener('click', async () => {
+    const fontName = inputFontName.value.trim();
+    if (!fontName) return alert('请输入字体名称');
+    if (!currentFontData) return alert('请先上传字体');
+    
+    const fontPreset = {
+      name: fontName,
+      category: selectedCategory,
+      ...currentFontData,
+      createdAt: Date.now()
+    };
+    
+    const transaction = fontDB.transaction(['fonts'], 'readwrite');
+    const store = transaction.objectStore('fonts');
+    store.add(fontPreset);
+    
+    transaction.oncomplete = () => {
+      alert('保存成功！');
+      inputFontName.value = '';
+      if (inputFontUrl) inputFontUrl.value = '';
+      if (inputFontFile) inputFontFile.value = '';
+      currentFontData = null;
+      loadFontPresets();
+    };
+  });
+}
+
+// 加载预设列表
+const loadFontPresets = () => {
+  if (!fontDB || !fontPresetList) return;
+  const transaction = fontDB.transaction(['fonts'], 'readonly');
+  const store = transaction.objectStore('fonts');
+  const request = store.getAll();
+  request.onsuccess = () => renderFontPresets(request.result);
+};
+
+// 渲染列表
+const renderFontPresets = (fonts) => {
+  if (!fontPresetList) return;
+  if (fonts.length === 0) {
+    fontPresetList.innerHTML = '<div style=\"text-align:center;color:#999;padding:20px;\">暂无保存的字体</div>';
+    return;
+  }
+  
+  const categoryNames = { 'sans-serif': '无衬线', 'serif': '衬线', 'handwriting': '手写', 'monospace': '等宽' };
+  
+  fontPresetList.innerHTML = fonts.map(font => 
+    <div class=\"font-preset-item\" data-font-id=\"${font.id}\">
+      <div class=\"font-preset-info\">
+        <div class=\"font-preset-name\">${font.name}</div>
+        <div class=\"font-preset-category\">${categoryNames[font.category] || font.category}</div>
+      </div>
+      <div class=\"font-preset-actions\">
+        <button class=\"font-preset-btn apply\" onclick=\"applyFont(${font.id})\" title=\"应用\">✓</button>
+        <button class=\"font-preset-btn delete\" onclick=\"deleteFont(${font.id})\" title=\"删除\">×</button>
+      </div>
+    </div>
+  ).join('');
+};
+
+// 应用字体
+window.applyFont = async (fontId) => {
+  const transaction = fontDB.transaction(['fonts'], 'readonly');
+  const store = transaction.objectStore('fonts');
+  const request = store.get(fontId);
+  
+  request.onsuccess = () => {
+    const font = request.result;
+    if (!font) return;
+    
+    const fontFamily = 'CustomFont_' + fontId;
+    const fontSrc = font.source === 'url' ? url(${font.url}) : url(${font.data});
+    const fontFace = new FontFace(fontFamily, fontSrc);
+    
+    fontFace.load().then((loadedFont) => {
+      document.fonts.add(loadedFont);
+      document.documentElement.style.setProperty('--custom-font', fontFamily);
+      alert(字体「${font.name}」已应用);
+    }).catch(() => alert('应用失败'));
+  };
+};
+
+// 删除字体
+window.deleteFont = (fontId) => {
+  if (!confirm('确定删除？')) return;
+  const transaction = fontDB.transaction(['fonts'], 'readwrite');
+  const store = transaction.objectStore('fonts');
+  store.delete(fontId);
+  transaction.oncomplete = () => loadFontPresets();
+};
+
